@@ -248,6 +248,8 @@
   .seatbar{display:flex;gap:8px}
   .seatbar .s{flex:1;height:46px;border-radius:14px;border:2px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:13px;color:var(--ink-faint);background:var(--cream)}
   .seatbar .s.taken{background:var(--sun);color:#fff;border-color:var(--sun)}
+  .status-open{align-self:center;display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:16px;color:#15916b;background:var(--mint-soft);border:2px solid var(--mint);border-radius:999px;padding:10px 22px}
+  .status-open .dot{width:10px;height:10px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(46,212,167,.22)}
   .note-tmp{font-size:12px;color:#9a7a2a;background:var(--sun-soft);border:2px dashed var(--sun);border-radius:12px;padding:11px 13px;font-weight:700}
 
   /* faq */
@@ -559,18 +561,13 @@
           <li><span class="k">回数</span><span>全5回（各60分／<b>最終回は発表会つきで約90分</b>）</span></li>
           <li><span class="k">定員</span><span><b>6名</b>・少人数制・先着順</span></li>
           <li><span class="k">会場</span><span>WinBe 梅ヶ丘校</span></li>
-          <li><span class="k">日程</span><span>金曜 <b>13:00–14:00</b>（7月下旬〜8月後半／最終回は発表会のため延長）<br><span class="tmp">※開催日・回数は確定後に掲載</span></span></li>
+          <li><span class="k">日程</span><span>金曜 <b>13:00–14:00</b>・全5回<br><b>7/24・7/31・8/7・8/21・8/28</b><br>※最終回 8/28 は発表会（デモデイ）のため約90分</span></li>
         </ul>
       </div>
       <div class="scarce">
-        <div class="seats">残席状況（イメージ）</div>
-        <div class="seatbar">
-          <div class="s taken">満</div><div class="s taken">満</div><div class="s taken">満</div>
-          <div class="s taken">満</div><div class="s">空</div><div class="s">空</div>
-        </div>
-        <div class="seats">少人数のため、お申し込みはお早めに！</div>
-        <a class="btn btn-primary" href="#" style="justify-content:center" id="applyBtn">無料相談・お申し込みへ →</a>
-        <div class="note-tmp">⚙ 仮置き：申込ボタンのリンク先（申込フォーム／LINE／電話）と「日程・残席」を確定後に差し替えてください。</div>
+        <div class="status-open"><span class="dot"></span>受付中</div>
+        <div class="seats" style="text-align:center">定員 <b>6名</b>・少人数制・先着順<br>満席になり次第、受付を終了します。</div>
+        <a class="btn btn-primary" href="#" style="justify-content:center" id="applyBtn">いますぐ申し込む（先着6名）→</a>
       </div>
     </div>
   </div>
@@ -602,6 +599,10 @@
         <summary><span class="qtext">持ち物は必要ですか？</span></summary>
         <div class="a">筆記用具のみで参加いただけます。ワークシート・教材はすべて教室でご用意します。</div>
       </details>
+      <details>
+        <summary><span class="qtext">入金・キャンセル・欠席について教えてください。</span></summary>
+        <div class="a"><b>【ご入金・受講確定】</b>お申し込み後1週間以内に参加費をご入金ください。ご入金の確認をもって受講確定（お席の確保）となります。期日までにご入金が確認できない場合は、お申し込みを保留・キャンセルとさせていただく場合があります。<br><br><b>【キャンセル・返金】</b>お客様都合のキャンセルは開講2週間前まで無料（全額返金）、それ以降は教材手配の都合上、参加費の30〜50%を申し受ける場合があります。定員未達・当校都合などで開講に至らなかった場合は全額返金いたします。<br><br><b>【欠席・振替】</b>短期集中型のパッケージレッスンのため、<b>欠席分の振替は行っておりません</b>。やむを得ず欠席された場合は、その回の資料をお渡しするなどでサポートします。</div>
+      </details>
     </div>
   </div>
 </section>
@@ -615,7 +616,7 @@
       <h2>この夏、子どもが<br><span class="accent">「起業家」</span>になる！</h2>
       <p>英語を“武器”に変えるひと夏。席はたったの6つだけ。お子さまの最初の挑戦を、いっしょに応援させてください。</p>
       <div class="cta-row" style="justify-content:center">
-        <a class="btn btn-primary" href="#" id="applyBtn2">無料相談・お申し込みへ →</a>
+        <a class="btn btn-primary" href="#" id="applyBtn2">いますぐ申し込む →</a>
       </div>
     </div>
   </div>
@@ -631,7 +632,7 @@
 
 <!-- ===== Sticky mobile CTA ===== -->
 <div class="sticky-cta">
-  <a class="btn btn-primary" href="#apply">のこり2席／いますぐ申し込む →</a>
+  <a class="btn btn-primary" href="#apply">受付中／いますぐ申し込む →</a>
 </div>
 
 <script>
@@ -654,6 +655,24 @@
     });
   }, {threshold:.6});
   document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+
+  /* ===== 申込み導線（Google フォーム） =====
+     ★ Google フォーム作成後、下の APPLY_URL に「共有URL（https://forms.gle/… 等）」を貼るだけで
+       ページ内のすべての申込ボタン（#applyBtn / #applyBtn2）が新規タブで開くようになります。
+       URL が空の間は、誤って壊れたリンクへ飛ばないよう「準備中」案内を表示します。 */
+  const APPLY_URL = "https://docs.google.com/forms/d/e/1FAIpQLScUFcgbXUefWBjdcjORlgSkqeLHAY4V0DCv5axigTCxA_jF_g/viewform"; // Google フォーム（申込）
+  document.querySelectorAll("#applyBtn, #applyBtn2").forEach(btn=>{
+    if(APPLY_URL){
+      btn.href = APPLY_URL;
+      btn.target = "_blank";
+      btn.rel = "noopener";
+    } else {
+      btn.addEventListener("click", e=>{
+        e.preventDefault();
+        alert("お申し込みフォームは現在準備中です。公開までもう少々お待ちください。");
+      });
+    }
+  });
 </script>
 </body>
 </html>
