@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>中3文法マスターコース with Pomodoro｜中3英語の難所を、この夏ひと月で。</title>
+<meta name="description" content="中3英語の難所（現在完了・関係代名詞・分詞・仮定法）を、たった4回・1ヶ月で俯瞰する夏期講習。2学期と高校受験を「復習」に。中1文法マスター好評シリーズの中3版は【開講検討中】。先行ご案内（ウェイトリスト）受付中。指導歴10年超のベテラン講師×ポモドーロ学習法。全4回×120分・木曜10:00〜（7/30他・予定）／定員8名（予定）・WinBe梅ヶ丘校。日程・早割・募集締切は開講確定後にご案内。" />
+<meta property="og:title" content="中3文法マスターコース with Pomodoro" />
+<meta property="og:description" content="中3英語の難所を、この夏ひと月で。指導歴10年超のベテラン講師×ポモドーロ学習法。中1文法マスター好評シリーズの中3版は【開講検討中】。先行ご案内（ウェイトリスト）受付中。全4回×120分・予定価格¥30,000。" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #16181d;
+    --ink-soft: #3d424d;
+    --ink-mute: #6b7280;
+    --paper: #fbfaf7;
+    --paper-2: #f3f1ea;
+    --line: #e6e2d8;
+    --tomato: #e0463a;
+    --tomato-dark: #c2392e;
+    --tomato-soft: #fbe9e6;
+    --leaf: #2f7d55;
+    --gold: #c9a227;
+    --white: #ffffff;
+    --radius: 18px;
+    --radius-sm: 12px;
+    --shadow: 0 18px 50px -22px rgba(22, 24, 29, .35);
+    --shadow-sm: 0 8px 24px -14px rgba(22, 24, 29, .35);
+    --maxw: 1120px;
+    --sans: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    --latin: "Outfit", system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.85;
+    font-size: 16px;
+    letter-spacing: .01em;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .wrap { width: min(var(--maxw), 92%); margin-inline: auto; }
+  .latin { font-family: var(--latin); font-feature-settings: "tnum"; }
+
+  /* ---------- Eyebrow / headings ---------- */
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: .55em;
+    font-family: var(--latin); font-weight: 700; font-size: .78rem;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: var(--tomato);
+  }
+  .eyebrow::before {
+    content: ""; width: 26px; height: 2px; background: var(--tomato); display: inline-block;
+  }
+  .eyebrow.center { justify-content: center; }
+
+  h2.sec-title {
+    font-family: var(--display); font-weight: 900;
+    font-size: clamp(1.7rem, 4.6vw, 2.9rem);
+    line-height: 1.3; letter-spacing: .01em;
+    margin: .55rem 0 .2rem;
+  }
+  .sec-lead { color: var(--ink-soft); font-size: 1.02rem; max-width: 46em; }
+  .em { color: var(--tomato); font-weight: 700; }
+  .marker {
+    background: linear-gradient(transparent 62%, var(--tomato-soft) 62%);
+    padding: 0 .08em; font-weight: 700;
+  }
+
+  section { padding: clamp(64px, 9vw, 118px) 0; }
+  .center { text-align: center; }
+  .section-head { margin-bottom: clamp(34px, 5vw, 58px); }
+  .section-head.center { display: flex; flex-direction: column; align-items: center; }
+
+  /* ---------- Header ---------- */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251, 250, 247, .82);
+    backdrop-filter: saturate(140%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: .6rem; font-family: var(--display); font-weight: 900; font-size: 1.02rem; }
+  .brand .dot {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: radial-gradient(circle at 32% 30%, #ff6a5b, var(--tomato) 60%, var(--tomato-dark));
+    position: relative; flex: none;
+    box-shadow: 0 4px 10px -3px rgba(224,70,58,.6);
+  }
+  .brand .dot::before { content:""; position:absolute; top:-5px; left:50%; transform:translateX(-50%) rotate(-18deg); width:4px; height:8px; background:var(--leaf); border-radius:3px; }
+  .nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: .9rem; font-weight: 500; }
+  .nav-links a.txt { color: var(--ink-soft); }
+  .nav-links a.txt:hover { color: var(--ink); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+    font-weight: 700; font-family: var(--sans);
+    padding: .85em 1.6em; border-radius: 999px; cursor: pointer; border: none;
+    transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+    font-size: .98rem; line-height: 1;
+  }
+  .btn-primary { background: var(--tomato); color: #fff; box-shadow: 0 12px 26px -12px rgba(224,70,58,.8); }
+  .btn-primary:hover { background: var(--tomato-dark); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .btn-ghost:hover { background: var(--ink); color: #fff; }
+  .btn-lg { padding: 1.05em 2.2em; font-size: 1.05rem; }
+  .nav .btn { padding: .62em 1.3em; font-size: .88rem; }
+  @media (max-width: 720px){ .nav-links .txt { display:none; } }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; padding: clamp(54px, 8vw, 96px) 0 clamp(48px,7vw,84px); overflow: hidden; }
+  .hero::before {
+    content:""; position:absolute; inset:0; z-index:-2;
+    background:
+      radial-gradient(60% 50% at 88% 8%, rgba(224,70,58,.10), transparent 60%),
+      radial-gradient(50% 40% at 0% 100%, rgba(47,125,85,.07), transparent 60%),
+      var(--paper);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
+  @media (max-width: 900px){ .hero-grid { grid-template-columns: 1fr; } }
+
+  .hero .kicker {
+    display:inline-flex; gap:.6em; align-items:center; flex-wrap:wrap;
+    font-size:.82rem; font-weight:700; color:var(--ink-soft);
+    background:var(--white); border:1px solid var(--line);
+    padding:.5em 1em; border-radius:999px; box-shadow: var(--shadow-sm);
+  }
+  .hero .kicker b { color: var(--tomato); font-family: var(--latin); }
+  .hero h1 {
+    font-family: var(--display); font-weight:900;
+    font-size: clamp(2.1rem, 6.3vw, 4rem); line-height:1.22; letter-spacing:.005em;
+    margin: 1rem 0 .2rem;
+  }
+  .hero h1 .hl { color: var(--tomato); }
+  .hero .course-tag {
+    font-family: var(--latin); font-weight:700; font-size: clamp(.95rem,2.3vw,1.18rem);
+    color: var(--ink-mute); letter-spacing:.04em; margin-bottom: 1.1rem;
+  }
+  .hero p.sub { font-size: 1.06rem; color: var(--ink-soft); max-width: 32em; margin-bottom: 1.6rem; }
+  .hero .cta-row { display:flex; gap:.9rem; flex-wrap:wrap; margin-bottom: 1.4rem; }
+  .hero .urg { font-size:.92rem; color:var(--ink-soft); display:flex; align-items:center; gap:.5em; }
+  .hero .urg .pill { background:var(--ink); color:#fff; font-weight:700; font-size:.8rem; padding:.32em .8em; border-radius:999px; }
+
+  .hero-card {
+    background: var(--white); border:1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: clamp(22px,3vw,30px);
+  }
+  .hero-card h3 { font-family: var(--display); font-size: 1.05rem; margin-bottom: 1rem; display:flex; align-items:center; gap:.5em; }
+  .hero-card h3::before { content:""; width:10px; height:10px; border-radius:50%; background:var(--tomato); }
+  .fact { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:.7rem 0; border-bottom:1px dashed var(--line); }
+  .fact:last-child { border-bottom:none; }
+  .fact .k { color:var(--ink-mute); font-size:.88rem; font-weight:500; flex:none; }
+  .fact .v { font-weight:700; text-align:right; }
+  .fact .v .big { font-family:var(--latin); font-size:1.45rem; color:var(--tomato); }
+  .fact .v small { font-weight:500; color:var(--ink-mute); }
+  .fact .v small s { color:var(--ink-mute); margin-right:.3em; }
+  .deal-tag {
+    display:inline-block; font-family:var(--sans); font-weight:700; font-size:.68rem;
+    letter-spacing:.04em; color:#fff; background:var(--leaf);
+    padding:.18em .6em; border-radius:999px; margin-bottom:.25rem;
+  }
+
+  /* ---------- Marquee strip ---------- */
+  .strip { background: var(--ink); color:#fff; padding: 16px 0; }
+  .strip .wrap { display:flex; flex-wrap:wrap; justify-content:center; gap: 1rem 2.4rem; text-align:center; }
+  .strip .item { display:flex; align-items:center; gap:.55em; font-size:.92rem; font-weight:500; }
+  .strip .item b { font-family:var(--latin); color:#ffb3aa; font-weight:700; }
+  .strip .item .ic { color:var(--tomato); }
+
+  /* ---------- Problem ---------- */
+  .problem { background: var(--paper-2); }
+  .problem .big-claim {
+    font-family: var(--display); font-weight:900;
+    font-size: clamp(1.55rem, 4.4vw, 2.7rem); line-height:1.4; max-width: 18em;
+  }
+  .cards { display:grid; gap: 1.1rem; }
+  .cards.c3 { grid-template-columns: repeat(3, 1fr); }
+  .cards.c2 { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 820px){ .cards.c3 { grid-template-columns:1fr; } .cards.c2 { grid-template-columns:1fr; } }
+  .pain {
+    background: var(--white); border:1px solid var(--line); border-radius: var(--radius-sm);
+    padding: 1.5rem 1.4rem; box-shadow: var(--shadow-sm); position:relative;
+  }
+  .pain .q { font-weight:700; font-size:1.05rem; margin-bottom:.5rem; }
+  .pain .q::before { content:"""; color:var(--tomato); font-family:var(--display); font-size:1.6rem; line-height:0; margin-right:.1em; }
+  .pain .a { color:var(--ink-soft); font-size:.94rem; }
+  .pain .a b { color:var(--tomato); }
+  .turn {
+    margin-top: 2.6rem; text-align:center; font-size:1.12rem; font-weight:700;
+    color: var(--ink);
+  }
+  .turn .marker { font-size:1.18rem; }
+
+  /* ---------- Definition (成功の定義) ---------- */
+  .defs { display:grid; grid-template-columns: repeat(3,1fr); gap:1.1rem; counter-reset: d; }
+  @media (max-width: 820px){ .defs { grid-template-columns:1fr; } }
+  .def {
+    border:1px solid var(--line); border-radius: var(--radius-sm); padding:1.7rem 1.4rem;
+    background: var(--white); position:relative; box-shadow: var(--shadow-sm);
+  }
+  .def .step { font-family:var(--latin); font-weight:800; color:var(--tomato); font-size:.8rem; letter-spacing:.12em; }
+  .def h4 { font-family:var(--display); font-size:1.08rem; margin:.4rem 0 .6rem; }
+  .def p { color:var(--ink-soft); font-size:.94rem; }
+  .def.final { background: var(--ink); color:#fff; border-color:var(--ink); }
+  .def.final h4 { color:#fff; }
+  .def.final p { color:#cfd2d8; }
+  .def.final .step { color:#ffb3aa; }
+
+  /* ---------- Features ---------- */
+  .feat { display:grid; grid-template-columns: repeat(3,1fr); gap:1.3rem; }
+  @media (max-width: 820px){ .feat { grid-template-columns:1fr; } }
+  .feature {
+    border:1px solid var(--line); border-radius: var(--radius); background:var(--white);
+    padding: 2rem 1.6rem; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .feature:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+  .feature .no { font-family:var(--latin); font-weight:800; font-size:2.4rem; color:var(--tomato-soft); line-height:1; -webkit-text-stroke:1.5px var(--tomato); }
+  .feature .ic { font-size:1.8rem; margin: -2.4rem 0 .8rem auto; width:fit-content; }
+  .feature h4 { font-family:var(--display); font-size:1.22rem; margin-bottom:.6rem; line-height:1.4; }
+  .feature p { color:var(--ink-soft); font-size:.95rem; }
+
+  /* ---------- Pomodoro deep ---------- */
+  .pomo { background: var(--ink); color:#fff; position:relative; overflow:hidden; }
+  .pomo::after { content:""; position:absolute; right:-90px; top:-90px; width:340px; height:340px; border-radius:50%; background: radial-gradient(circle at 35% 30%, #ff6a5b, var(--tomato) 62%, var(--tomato-dark)); opacity:.16; }
+  .pomo .eyebrow { color:#ffb3aa; }
+  .pomo .eyebrow::before { background:#ffb3aa; }
+  .pomo h2.sec-title { color:#fff; }
+  .pomo .sec-lead { color:#cfd2d8; }
+  .pomo-grid { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,4vw,56px); align-items:center; }
+  @media (max-width: 880px){ .pomo-grid { grid-template-columns:1fr; } }
+  .pomo-points { display:grid; gap:1rem; }
+  .ppoint { display:flex; gap:1rem; align-items:flex-start; background: rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius: var(--radius-sm); padding:1.1rem 1.2rem; }
+  .ppoint .ic { font-size:1.5rem; flex:none; }
+  .ppoint h5 { font-size:1.02rem; margin-bottom:.2rem; }
+  .ppoint p { color:#cfd2d8; font-size:.9rem; }
+  .timer-visual { display:flex; flex-direction:column; align-items:center; gap:1.2rem; }
+  .clock {
+    width: clamp(180px, 40vw, 240px); aspect-ratio:1; border-radius:50%;
+    background: conic-gradient(var(--tomato) 0 83.3%, rgba(255,255,255,.14) 83.3% 100%);
+    display:grid; place-items:center; position:relative;
+    box-shadow: 0 30px 60px -28px rgba(224,70,58,.8);
+  }
+  .clock::before { content:""; position:absolute; inset:14px; border-radius:50%; background:var(--ink); }
+  .clock .lbl { position:relative; text-align:center; }
+  .clock .lbl .min { font-family:var(--latin); font-weight:800; font-size:2.6rem; line-height:1; }
+  .clock .lbl .cap { font-size:.78rem; color:#cfd2d8; letter-spacing:.1em; }
+  .timer-visual .legend { display:flex; gap:1.4rem; font-size:.85rem; }
+  .timer-visual .legend span { display:flex; align-items:center; gap:.4em; }
+  .sw { width:12px; height:12px; border-radius:3px; }
+
+  /* ---------- Timeline ---------- */
+  .timeline { display:grid; gap: 0; max-width: 760px; margin-inline:auto; }
+  .tl {
+    display:grid; grid-template-columns: auto 1fr; gap: 1.2rem; padding: 0 0 0 .2rem;
+  }
+  .tl .rail { display:flex; flex-direction:column; align-items:center; }
+  .tl .node {
+    width:46px; height:46px; border-radius:50%; flex:none; display:grid; place-items:center;
+    font-family:var(--latin); font-weight:800; background:var(--tomato); color:#fff; font-size:.95rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .tl .line { width:2px; flex:1; background: var(--line); min-height: 18px; }
+  .tl:last-child .line { display:none; }
+  .tl .body { padding-bottom: 1.5rem; }
+  .tl .body .head { display:flex; align-items:center; gap:.7rem; flex-wrap:wrap; }
+  .tl .body h5 { font-family:var(--display); font-size:1.08rem; }
+  .tl .body .dur { font-family:var(--latin); font-weight:700; font-size:.8rem; color:var(--tomato); background:var(--tomato-soft); padding:.2em .7em; border-radius:999px; }
+  .tl .body .break { font-size:.82rem; color:var(--ink-mute); }
+  .tl .body p { color:var(--ink-soft); font-size:.93rem; margin-top:.25rem; }
+  .tl.bonus .node { background: var(--leaf); }
+  .tl.bonus .dur { color: var(--leaf); background: #e6f1eb; }
+  .tl-note { text-align:center; margin-top:1.2rem; font-size:.9rem; color:var(--ink-mute); }
+
+  /* ---------- Scope (grammar list) ---------- */
+  .scope-grid { display:grid; grid-template-columns: repeat(5,1fr); gap:.9rem; }
+  @media (max-width: 900px){ .scope-grid { grid-template-columns: repeat(2,1fr); } }
+  .gitem {
+    background:var(--white); border:1px solid var(--line); border-radius: var(--radius-sm);
+    padding:1.1rem .9rem; text-align:center; box-shadow: var(--shadow-sm);
+    display:flex; flex-direction:column; gap:.4rem; align-items:center;
+    transition: transform .18s ease, border-color .18s ease;
+  }
+  .gitem:hover { transform: translateY(-3px); border-color: var(--tomato); }
+  .gitem .n { font-family:var(--latin); font-weight:800; color:var(--tomato); font-size:.8rem; }
+  .gitem .t { font-weight:700; font-size:.92rem; line-height:1.4; }
+
+  /* ---------- Before / After ---------- */
+  .ba { display:grid; grid-template-columns:1fr auto 1fr; gap:1.4rem; align-items:stretch; }
+  @media (max-width: 820px){ .ba { grid-template-columns:1fr; } .ba .arrow { transform: rotate(90deg); } }
+  .ba-col { border-radius: var(--radius); padding: 1.8rem 1.6rem; }
+  .ba-col.before { background: var(--paper-2); border:1px solid var(--line); }
+  .ba-col.after { background: var(--ink); color:#fff; box-shadow: var(--shadow); }
+  .ba-col h4 { font-family:var(--display); font-size:1.12rem; margin-bottom:1rem; display:flex; align-items:center; gap:.5em; }
+  .ba-col.before h4 { color:var(--ink-mute); }
+  .ba-col ul { list-style:none; display:grid; gap:.8rem; }
+  .ba-col li { display:flex; gap:.6rem; font-size:.95rem; align-items:flex-start; }
+  .ba-col.before li { color:var(--ink-soft); }
+  .ba-col.before li::before { content:"✕"; color:#b9b2a4; font-weight:700; flex:none; }
+  .ba-col.after li::before { content:"✓"; color:#7fe0a8; font-weight:800; flex:none; }
+  .ba .arrow { display:grid; place-items:center; font-size:1.8rem; color:var(--tomato); }
+
+  /* ---------- Who (persona) ---------- */
+  .who { display:grid; grid-template-columns:1fr 1fr; gap:1.3rem; }
+  @media (max-width: 820px){ .who { grid-template-columns:1fr; } }
+  .persona { border:1px solid var(--line); border-radius: var(--radius); padding:1.9rem 1.6rem; background:var(--white); box-shadow: var(--shadow-sm); }
+  .persona .tag { display:inline-block; font-weight:700; font-size:.78rem; letter-spacing:.08em; color:var(--tomato); background:var(--tomato-soft); padding:.35em .9em; border-radius:999px; margin-bottom:.9rem; }
+  .persona.review .tag { color: var(--leaf); background:#e6f1eb; }
+  .persona h4 { font-family:var(--display); font-size:1.18rem; margin-bottom:.5rem; }
+  .persona p { color:var(--ink-soft); font-size:.95rem; }
+
+  /* ---------- Voices ---------- */
+  .voices { display:grid; grid-template-columns: repeat(2,1fr); gap:1.3rem; max-width: 880px; margin-inline:auto; }
+  @media (max-width: 760px){ .voices { grid-template-columns:1fr; } }
+  .voice {
+    background:var(--white); border:1px solid var(--line); border-radius: var(--radius);
+    padding: 1.8rem 1.6rem; box-shadow: var(--shadow-sm); position:relative;
+  }
+  .voice::before {
+    content:"""; position:absolute; top:.2rem; right:1.2rem;
+    font-family:var(--display); font-weight:900; font-size:3.4rem; color:var(--tomato-soft); line-height:1;
+  }
+  .voice .stars { color:var(--gold); letter-spacing:.1em; font-size:1.02rem; margin-bottom:.2rem; }
+  .voice .rate { font-size:.78rem; color:var(--ink-mute); font-weight:500; margin-bottom:.9rem; }
+  .voice .rate .latin { color:var(--tomato); font-weight:700; }
+  .voice blockquote { font-size:1.02rem; font-weight:500; line-height:1.9; color:var(--ink); }
+  .voice blockquote .marker { font-weight:700; }
+  .voice .who-tag { margin-top:1rem; font-size:.82rem; color:var(--ink-mute); font-weight:600; display:flex; align-items:center; gap:.4em; }
+  .voice .who-tag::before { content:""; width:18px; height:2px; background:var(--ink-mute); display:inline-block; }
+  .voices-note { text-align:center; margin-top:1.6rem; font-size:.84rem; color:var(--ink-mute); }
+
+  /* ---------- Overview table ---------- */
+  .overview { background: var(--paper-2); }
+  .ov-table { background:var(--white); border:1px solid var(--line); border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow-sm); }
+  .ov-row { display:grid; grid-template-columns: 168px 1fr; border-bottom:1px solid var(--line); }
+  .ov-row:last-child { border-bottom:none; }
+  .ov-row .k { background: var(--paper); font-weight:700; padding:1.1rem 1.4rem; font-size:.92rem; color:var(--ink); display:flex; align-items:center; }
+  .ov-row .v { padding:1.1rem 1.4rem; color:var(--ink-soft); }
+  .ov-row .v strong { color:var(--ink); }
+  .ov-row .v .price { font-family:var(--latin); font-weight:800; color:var(--tomato); font-size:1.5rem; }
+  @media (max-width: 620px){ .ov-row { grid-template-columns: 110px 1fr; } .ov-row .k, .ov-row .v { padding:.85rem 1rem; } }
+
+  /* ---------- FAQ ---------- */
+  .faq { max-width: 800px; margin-inline:auto; display:grid; gap:.8rem; }
+  details.qa { background:var(--white); border:1px solid var(--line); border-radius: var(--radius-sm); overflow:hidden; box-shadow: var(--shadow-sm); }
+  details.qa summary { list-style:none; cursor:pointer; padding:1.1rem 1.4rem; font-weight:700; display:flex; gap:.8rem; align-items:flex-start; position:relative; }
+  details.qa summary::-webkit-details-marker { display:none; }
+  details.qa summary .qm { color:var(--tomato); font-family:var(--display); font-weight:900; flex:none; }
+  details.qa summary .chev { margin-left:auto; transition: transform .2s ease; color:var(--ink-mute); flex:none; }
+  details.qa[open] summary .chev { transform: rotate(180deg); }
+  details.qa .ans { padding: 0 1.4rem 1.2rem 3rem; color:var(--ink-soft); font-size:.95rem; }
+
+  /* ---------- Apply / form ---------- */
+  .apply { background: var(--ink); color:#fff; }
+  .apply .eyebrow { color:#ffb3aa; } .apply .eyebrow::before { background:#ffb3aa; }
+  .apply h2.sec-title { color:#fff; }
+  .apply .sec-lead { color:#cfd2d8; }
+  .form-wrap { max-width: 640px; margin-inline:auto; background:var(--white); color:var(--ink); border-radius: var(--radius); padding: clamp(24px,4vw,40px); box-shadow: var(--shadow); }
+  .field { margin-bottom: 1.1rem; }
+  .field label { display:block; font-weight:700; font-size:.9rem; margin-bottom:.4rem; }
+  .field label .req { color:var(--tomato); font-size:.78rem; margin-left:.3em; }
+  .field input, .field select, .field textarea {
+    width:100%; font-family:var(--sans); font-size:1rem; color:var(--ink);
+    padding:.8em .9em; border:1.5px solid var(--line); border-radius:10px; background:var(--paper);
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline:none; border-color:var(--tomato); box-shadow:0 0 0 3px var(--tomato-soft); background:#fff;
+  }
+  .field textarea { resize: vertical; min-height: 92px; }
+  .field-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  @media (max-width: 560px){ .field-row { grid-template-columns:1fr; } }
+  .consent { display:flex; gap:.6rem; align-items:flex-start; font-size:.88rem; color:var(--ink-soft); margin: .3rem 0 1.2rem; }
+  .consent input { width:18px; height:18px; flex:none; margin-top:.2rem; accent-color: var(--tomato); }
+  #btn-submit-form { width:100%; }
+  .form-status-msg { margin-top:1rem; text-align:center; font-weight:700; font-size:.95rem; min-height:1.2em; }
+  .form-status-msg.success { color: var(--leaf); }
+  .form-status-msg.error { color: var(--tomato); }
+  .form-note { text-align:center; font-size:.82rem; color:#cfd2d8; margin-top:1.4rem; }
+  .form-note a { color:#ffb3aa; text-decoration:underline; }
+
+  /* ---------- Footer ---------- */
+  footer.site { background: #101216; color:#aeb4bf; padding: 56px 0 40px; font-size:.9rem; }
+  footer.site .f-grid { display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap; }
+  footer.site .brand { color:#fff; margin-bottom:.8rem; }
+  footer.site .f-contact div { margin-bottom:.3rem; }
+  footer.site a { color:#ffb3aa; }
+  footer.site .copy { margin-top:2.4rem; padding-top:1.4rem; border-top:1px solid rgba(255,255,255,.1); font-size:.8rem; color:#6b7280; }
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .mobile-cta { position: fixed; left:0; right:0; bottom:0; z-index:60; padding:.7rem 4%; background:rgba(251,250,247,.95); backdrop-filter:blur(8px); border-top:1px solid var(--line); display:none; }
+  .mobile-cta .btn { width:100%; }
+  @media (max-width: 720px){ .mobile-cta { display:block; } body { padding-bottom: 76px; } }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal { opacity:0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .reveal { opacity:1; transform:none; transition:none; } html{ scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="dot"></span>中3文法マスター<span style="color:var(--tomato)">×</span>Pomodoro</a>
+    <nav class="nav-links">
+      <a class="txt" href="#why">なぜ中3の夏か</a>
+      <a class="txt" href="#features">特徴</a>
+      <a class="txt" href="#flow">1日の流れ</a>
+      <a class="txt" href="#overview">概要</a>
+      <a class="btn btn-primary" href="#apply">先行案内に登録</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Waitlist status banner ===== -->
+<div style="background:var(--leaf);color:#fff;text-align:center;padding:.75rem 1rem;font-weight:700;font-size:.92rem;line-height:1.6">
+  🔖 中3版は現在【開講検討中】です。下記は予定内容です。ご興味のある方は <span style="text-decoration:underline">先行ご案内（ウェイトリスト）</span> にご登録ください（先行案内は無料・登録で開講や日程確定をいち早くお知らせ）。
+</div>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="kicker">2026 SUMMER ｜ 中3生・受験を見据える層のための短期集中 ｜ <b>中1好評シリーズ 中3版 開講検討中（先行案内 受付中）</b></span>
+      <h1>中3英語の<span class="hl">難所</span>を、<br>この夏ひと月で。</h1>
+      <div class="course-tag latin">中3文法マスターコース <span style="color:var(--tomato)">with</span> Pomodoro</div>
+      <p class="sub">現在完了・関係代名詞・分詞・仮定法——中3の難所はこの夏に通しておく。高校受験の天王山を「やることが決まっている」状態で迎えるための、<strong>4回・1ヶ月の短期集中</strong>です。</p>
+      <div class="cta-row">
+        <a href="#apply" class="btn btn-primary btn-lg">先行案内に登録する（無料）→</a>
+        <a href="#features" class="btn btn-ghost btn-lg">特徴を見る</a>
+      </div>
+      <div class="urg"><span class="pill">開講検討中</span><span>定員8名（予定）。日程・早割・募集締切は<strong>開講確定後に</strong>登録者へ優先ご案内します。</span></div>
+    </div>
+
+    <aside class="hero-card reveal">
+      <h3>コース早わかり</h3>
+      <div class="fact"><span class="k">料金（4回パッケージ）</span><span class="v"><span class="deal-tag" style="background:var(--ink-mute)">予定価格</span><br><span class="big latin">¥30,000</span> <small>税込／早割は開講確定後に案内</small></span></div>
+      <div class="fact"><span class="k">回数・1コマ</span><span class="v">全4回 × <span class="latin">120</span>分</span></div>
+      <div class="fact"><span class="k">日程（木曜・予定）</span><span class="v latin">7/30・8/6<br>8/20・8/27<br><small style="font-family:var(--sans);color:var(--ink-mute);font-weight:500">※確定次第更新</small></span></div>
+      <div class="fact"><span class="k">時間</span><span class="v latin">10:00 – 12:00</span></div>
+      <div class="fact"><span class="k">定員</span><span class="v"><span class="latin">8</span>名（予定）</span></div>
+      <div class="fact"><span class="k">会場</span><span class="v">WinBe梅ヶ丘校</span></div>
+      <div class="fact"><span class="k">特典</span><span class="v">毎回後 <span class="latin">1</span>時間<br><small>自習タイム（質問し放題）</small></span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== Strip ===== -->
+<div class="strip">
+  <div class="wrap">
+    <span class="item"><span class="ic">★</span>中1好評シリーズ <b>中3版 開講検討中</b></span>
+    <span class="item"><span class="ic">◷</span>中3の難所文法を<b>1ヶ月</b>で俯瞰</span>
+    <span class="item"><span class="ic">◉</span>指導歴<b>10年超</b>のベテラン講師</span>
+    <span class="item"><span class="ic">🍅</span>科学的に集中が続く<b>ポモドーロ</b>学習法</span>
+  </div>
+</div>
+
+<!-- ===== Why summer (Problem) ===== -->
+<section class="problem" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">なぜ「中3の夏」なのか</span>
+      <p class="big-claim">中3の夏は、<span class="em">高校受験の天王山</span>。<br>難所を「やったことがある」と「やったことがない」では、秋以降の勉強量がまるで違う。</p>
+      <p class="sec-lead" style="margin-top:1.1rem">現在完了・関係代名詞・分詞・仮定法——中3で出会う文法は、それまでより格段に複雑になります。夏に一度通しておけば、2学期の授業も過去問演習も「はじめて」ではなく「復習」になります。受験生が本当に欲しいのは、この「先に通した感覚」です。</p>
+    </div>
+
+    <div class="cards c3">
+      <div class="pain reveal">
+        <p class="q">関係代名詞と分詞の修飾、どう違うのか分からない</p>
+        <p class="a"><b>→</b> 個別に覚えても混乱します。「名詞を後ろから説明する」という共通の概念から整理することで、両者の関係が見えてきます。</p>
+      </div>
+      <div class="pain reveal">
+        <p class="q">現在完了と過去形の使い分けが曖昧なまま</p>
+        <p class="a"><b>→</b> 継続・経験・完了の3用法を体系的に整理すれば、迷いがなくなります。この夏に一度通しておく価値がある最重要項目です。</p>
+      </div>
+      <div class="pain reveal">
+        <p class="q">仮定法は感覚が難しく、どうにも馴染まない</p>
+        <p class="a"><b>→</b> リードカードで「日本語の場面」を先に作り、「なぜ過去形を使うのか」を必然として体感させます。</p>
+      </div>
+    </div>
+
+    <p class="turn reveal">ここを夏に一度通しておけば、2学期の授業も入試対策も <span class="marker">"はじめて"ではなく"復習"</span> になります。</p>
+  </div>
+</section>
+
+<!-- ===== Definition (成功の定義) ===== -->
+<section id="goal">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">このコースが約束する状態</span>
+      <h2 class="sec-title">ゴールは「点数」ではなく、<br><span class="em">2学期と受験対策がまるごと復習になる</span>こと。</h2>
+      <p class="sec-lead">私たちが考える、このコースの「成功の定義」は3つの階層でできています。</p>
+    </div>
+    <div class="defs">
+      <div class="def reveal">
+        <span class="step">DEFINITION 01</span>
+        <h4>英語学習の成功とは</h4>
+        <p>中3の難所文法を「夏に通した」という事実が、2学期以降の学習を<strong>質的に変える</strong>こと。知っている状態で授業に臨む。</p>
+      </div>
+      <div class="def reveal">
+        <span class="step">DEFINITION 02</span>
+        <h4>文法学習の成功とは</h4>
+        <p>ルールの丸暗記ではなく、<strong>「言いたいことを英語にできる」</strong>こと。文法は表現の道具になる。</p>
+      </div>
+      <div class="def final reveal">
+        <span class="step">DEFINITION 03</span>
+        <h4>このコースが届けるもの</h4>
+        <p>1ヶ月で中3の難所文法を通しきり、さらに<strong>一生使える"集中の作法"</strong>まで持ち帰る。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Features ===== -->
+<section id="features" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">3つの特徴</span>
+      <h2 class="sec-title">「なぞるだけ」では、終わらせない。</h2>
+    </div>
+    <div class="feat">
+      <div class="feature reveal">
+        <div class="no latin">01</div>
+        <div class="ic">🗺️</div>
+        <h4>中3の難所を<br>1ヶ月で「俯瞰」</h4>
+        <p>現在完了・分詞・関係代名詞・仮定法まで、全4回×120分で体系的に。バラバラだった難所が、1本の地図としてつながります。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="no latin">02</div>
+        <div class="ic">🎓</div>
+        <h4>経験豊富な<br>ベテラン講師が指導</h4>
+        <p>指導歴10年超のベテラン講師が、中学生がつまずくポイントを先回り。中1文法マスターコースと同一のメソッドで、確かな定着を約束します。</p>
+      </div>
+      <div class="feature reveal">
+        <div class="no latin">03</div>
+        <div class="ic">🍅</div>
+        <h4>科学的に集中が続く<br>ポモドーロ学習法</h4>
+        <p>「25分集中＋5分休憩」を繰り返す世界的な時間管理術で学習。受験生が最も必要な「集中して勉強を終わらせる型」が身につきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pomodoro deep ===== -->
+<section class="pomo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">もう一つの"一生モノ"</span>
+      <h2 class="sec-title">身につくのは、<br>英文法だけじゃない。</h2>
+      <p class="sec-lead">ポモドーロ・テクニックは「25分だけ集中して、5分休む」を繰り返す、世界中で使われている集中法。このコースでは学習そのものをポモドーロで進めるから、英語と一緒に"集中の作法"が体に入ります。</p>
+    </div>
+    <div class="pomo-grid">
+      <div class="timer-visual reveal">
+        <div class="clock"><span class="lbl"><span class="min latin">25</span><span class="cap">FOCUS / min</span></span></div>
+        <div class="legend">
+          <span><span class="sw" style="background:var(--tomato)"></span>25分 集中</span>
+          <span><span class="sw" style="background:rgba(255,255,255,.25)"></span>5分 休憩</span>
+        </div>
+      </div>
+      <div class="pomo-points">
+        <div class="ppoint reveal"><span class="ic">🧠</span><div><h5>集中が続く（科学的に）</h5><p>短く区切るから集中力が切れにくい。長丁場の受験勉強で「ダラダラ」から抜け出せます。</p></div></div>
+        <div class="ppoint reveal"><span class="ic">📈</span><div><h5>達成感が積み上がる</h5><p>1ポモドーロごとに「できた」を実感。記録シートで自分の集中を可視化します。</p></div></div>
+        <div class="ppoint reveal"><span class="ic">🔁</span><div><h5>他教科・受験にも応用できる</h5><p>身につけた集中の型は、数学でも国語でも、これからの入試対策でも一生使えます。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Flow / Timeline ===== -->
+<section id="flow">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">120分の過ごし方</span>
+      <h2 class="sec-title">1コマ＝ちょうど<span class="em">4ポモドーロ</span>。</h2>
+      <p class="sec-lead center" style="text-align:center">「インプット→練習→アウトプット→確認」を、集中と休憩のリズムで一気に。</p>
+    </div>
+    <div class="timeline">
+      <div class="tl reveal">
+        <div class="rail"><div class="node latin">1</div><div class="line"></div></div>
+        <div class="body"><div class="head"><h5>導入＆インプット</h5><span class="dur">25分集中</span><span class="break">＋5分休憩</span></div><p>その回のターゲット文法を、つまずきやすい所から丁寧に。「なぜそう言うのか」から理解します。</p></div>
+      </div>
+      <div class="tl reveal">
+        <div class="rail"><div class="node latin">2</div><div class="line"></div></div>
+        <div class="body"><div class="head"><h5>練習問題で手を動かす</h5><span class="dur">25分集中</span><span class="break">＋5分休憩</span></div><p>覚えた文法をその場で問題演習。間違えたところを講師がすぐにフォローします。</p></div>
+      </div>
+      <div class="tl reveal">
+        <div class="rail"><div class="node latin">3</div><div class="line"></div></div>
+        <div class="body"><div class="head"><h5>アウトプット（英作文）</h5><span class="dur">25分集中</span><span class="break">＋5分休憩</span></div><p>「言いたいこと」を実際に英語に。文法を"使える"レベルに引き上げます。</p></div>
+      </div>
+      <div class="tl reveal">
+        <div class="rail"><div class="node latin">4</div><div class="line"></div></div>
+        <div class="body"><div class="head"><h5>確認テスト＆ふりかえり</h5><span class="dur">25分集中</span><span class="break">＋5分休憩</span></div><p>その回の到達度をチェック。「分からないまま」を持ち越さずに帰ります。</p></div>
+      </div>
+      <div class="tl bonus reveal">
+        <div class="rail"><div class="node">＋</div><div class="line"></div></div>
+        <div class="body"><div class="head"><h5>レッスン後の自習タイム</h5><span class="dur">＋60分</span><span class="break">特典・質問し放題</span></div><p>毎回のレッスン後、1時間の自習時間つき。講師に質問し放題で、疑問をその場で解消できます。</p></div>
+      </div>
+    </div>
+    <p class="tl-note">※ 各回の文法配分・進行は、生徒の理解度に合わせて講師が最適化します。</p>
+  </div>
+</section>
+
+<!-- ===== Scope ===== -->
+<section style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">4回で扱う重要文法（中2後半〜中3）</span>
+      <h2 class="sec-title">受験に効く難所文法を、これで一通り。</h2>
+    </div>
+    <div class="scope-grid">
+      <div class="gitem reveal"><span class="n latin">01</span><span class="t">現在完了<br>（継続・経験・完了）</span></div>
+      <div class="gitem reveal"><span class="n latin">02</span><span class="t">現在完了<br>進行形</span></div>
+      <div class="gitem reveal"><span class="n latin">03</span><span class="t">分詞の<br>後置修飾</span></div>
+      <div class="gitem reveal"><span class="n latin">04</span><span class="t">関係代名詞<br>（主格・目的格）</span></div>
+      <div class="gitem reveal"><span class="n latin">05</span><span class="t">不定詞<br>発展</span></div>
+      <div class="gitem reveal"><span class="n latin">06</span><span class="t">want / tell /<br>ask 人 to</span></div>
+      <div class="gitem reveal"><span class="n latin">07</span><span class="t">疑問詞 + to<br>（how to他）</span></div>
+      <div class="gitem reveal"><span class="n latin">08</span><span class="t">間接疑問文</span></div>
+      <div class="gitem reveal"><span class="n latin">09</span><span class="t">仮定法過去<br>（If I were...）</span></div>
+      <div class="gitem reveal"><span class="n latin">10</span><span class="t">I wish +<br>仮定法</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Before / After ===== -->
+<section>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">この夏で変わること</span>
+      <h2 class="sec-title">この夏に通せば、秋からの受験勉強が変わる。</h2>
+    </div>
+    <div class="ba">
+      <div class="ba-col before reveal">
+        <h4>このまま夏を過ごすと…</h4>
+        <ul>
+          <li>難所文法がバラバラのまま2学期へ突入</li>
+          <li>過去問の長文で関係代名詞・分詞に詰まる</li>
+          <li>長時間の勉強が続かず、仮定法は後回し</li>
+          <li>「わからない」を放置したまま積み上がる</li>
+        </ul>
+      </div>
+      <div class="arrow reveal">➔</div>
+      <div class="ba-col after reveal">
+        <h4>この夏ひと月で…</h4>
+        <ul>
+          <li>中3文法の難所を1本の地図として俯瞰できる</li>
+          <li>2学期の授業と入試演習が「復習」に変わる</li>
+          <li>25分集中の型が、受験勉強全体に使えるようになる</li>
+          <li>疑問はその場で解消、持ち越さない</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Who ===== -->
+<section style="background:var(--paper-2)" id="who">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">こんなお子さまに</span>
+      <h2 class="sec-title">「受験対策」も「立て直し」も。</h2>
+    </div>
+    <div class="who">
+      <div class="persona reveal">
+        <span class="tag">高校受験を見据える 中3</span>
+        <h4>受験の秋を「復習」で迎えたい</h4>
+        <p>難所文法を夏のうちに通しておき、秋以降の過去問演習を最大効率で進めたいお子さま。「知っている状態」で入試対策を始める——そのための先行投資です。</p>
+      </div>
+      <div class="persona review reveal">
+        <span class="tag">取り戻したい 中2・中3</span>
+        <h4>苦手な文法を、短期で立て直したい</h4>
+        <p>現在完了・関係代名詞など、学校で習ったけれど曖昧なままのお子さま。土台から一度通し直し、「分かる」を取り戻すきっかけになります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Voices ===== -->
+<section id="voices">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">シリーズ受講生の声（中1コースより）</span>
+      <h2 class="sec-title">同じ講師・同じメソッドで<br>積み上げてきた、実績の声。</h2>
+      <p class="sec-lead center" style="text-align:center">本コース（中3版）は新規企画のため、同一講師・同一メソッドで開講してきた中1文法マスターコースの受講生の声をご紹介します。</p>
+    </div>
+    <div class="voices">
+      <div class="voice reveal">
+        <div class="stars">★★★★★</div>
+        <div class="rate">満足度 <span class="latin">5</span>/5 ・ 講師の分かりやすさ <span class="latin">10</span>/10</div>
+        <blockquote>ポモドーロ法が、すごく<span class="marker">集中できて重宝</span>しています。<span class="marker">学校の宿題にもついていけるようになって</span>嬉しいです。</blockquote>
+        <div class="who-tag">中1文法マスターコース 受講生（中学生）</div>
+      </div>
+      <div class="voice reveal">
+        <div class="stars">★★★★☆</div>
+        <div class="rate">満足度 <span class="latin">4</span>/5 ・ 講師の分かりやすさ <span class="latin">9</span>/10</div>
+        <blockquote>スラングも教えてもらえて<span class="marker">面白かった</span>し、もっと教えてほしいくらい。とにかく<span class="marker">楽しかった！</span></blockquote>
+        <div class="who-tag">中1文法マスターコース 受講生（中学生）</div>
+      </div>
+    </div>
+    <p class="voices-note">※ 中1文法マスターコースの受講後アンケートに寄せられた声を、匿名で掲載しています。中3コースは新規企画のため、中3版の受講生の声は今後追加予定です。</p>
+  </div>
+</section>
+
+<!-- ===== Overview ===== -->
+<section class="overview" id="overview">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Overview</span>
+      <h2 class="sec-title">開催概要</h2>
+    </div>
+    <div class="ov-table reveal" style="max-width:820px;margin-inline:auto">
+      <div class="ov-row"><div class="k">コース名</div><div class="v"><strong>中3文法マスターコース with Pomodoro</strong></div></div>
+      <div class="ov-row"><div class="k">日程</div><div class="v"><strong>7/30・8/6・8/20・8/27</strong>（全4回・いずれも木曜）<br><small style="color:var(--ink-mute)">※日程は予定。確定次第このページで更新します。</small></div></div>
+      <div class="ov-row"><div class="k">時間</div><div class="v">各回 <strong>120分</strong>（10:00 – 12:00）＋レッスン後に自習タイム1時間（〜13:00）</div></div>
+      <div class="ov-row"><div class="k">料金</div><div class="v"><span class="price latin">¥30,000</span> <strong>（予定価格・税込）／4回パッケージ</strong><br><small style="color:var(--ink-mute)">早割の有無・条件は<strong style="color:var(--leaf)">開講確定後にご案内</strong>します。</small></div></div>
+      <div class="ov-row"><div class="k">会場</div><div class="v"><strong>WinBe梅ヶ丘校</strong>（小田急線「梅ヶ丘」駅 南口 徒歩30秒）</div></div>
+      <div class="ov-row"><div class="k">対象</div><div class="v">中2〜中3（高校受験を見据える層・文法を取り戻したい層も歓迎）</div></div>
+      <div class="ov-row"><div class="k">学習方式</div><div class="v">ポモドーロ・テクニック（25分集中＋5分休憩の反復）</div></div>
+      <div class="ov-row"><div class="k">特典</div><div class="v">各レッスン後に <strong>1時間の自習タイム</strong>（講師に質問し放題）</div></div>
+      <div class="ov-row"><div class="k">定員</div><div class="v"><strong>8名</strong>（予定・少人数制）</div></div>
+      <div class="ov-row"><div class="k">開講状況</div><div class="v"><strong>開講検討中</strong>／先行ご案内（ウェイトリスト）受付中。日程・募集締切は確定後に登録者へ優先案内。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">よくあるご質問</span>
+      <h2 class="sec-title">FAQ</h2>
+    </div>
+    <div class="faq">
+      <details class="qa reveal"><summary><span class="qm">Q</span>英語が苦手でも、ついていけますか？<span class="chev">▾</span></summary><div class="ans">はい。経験豊富なベテラン講師が、つまずきやすい所を先回りして丁寧に教えます。さらに毎回のレッスン後に1時間の自習タイム（質問し放題）があるので、「分からないまま」で帰すことはありません。</div></details>
+      <details class="qa reveal"><summary><span class="qm">Q</span>中2でも参加できますか？<span class="chev">▾</span></summary><div class="ans">はい。中3で扱う文法の先取りをしたい中2生、あるいは苦手を早めに整理したい中2生にも適しています。受験まで時間があるぶん、より余裕を持って定着させることができます。ご不安な場合は事前にご相談ください。</div></details>
+      <details class="qa reveal"><summary><span class="qm">Q</span>ポモドーロ学習法とは何ですか？<span class="chev">▾</span></summary><div class="ans">「25分集中して、5分休む」を繰り返す、世界的に有名な時間管理・集中法です。短く区切ることで集中が続きやすくなります。本コースでは学習そのものをこの方法で進めるため、英文法と同時に"集中の作法"が身につき、他教科や受験勉強にも応用できます。</div></details>
+      <details class="qa reveal"><summary><span class="qm">Q</span>本当に4回で中3の文法が分かるのですか？<span class="chev">▾</span></summary><div class="ans">目的は「完璧な暗記」ではなく、中3の重要文法を体系的に"俯瞰"することです。一度全体を通しておくことで、2学期以降の学校の授業や入試演習が「はじめて」ではなく「復習」になり、定着が一気に進みます。</div></details>
+      <details class="qa reveal"><summary><span class="qm">Q</span>持ち物や事前準備は必要ですか？<span class="chev">▾</span></summary><div class="ans">筆記用具をお持ちください。教材はこちらでご用意します。その他の詳細は、お申し込み後にあらためてご案内いたします。</div></details>
+      <details class="qa reveal"><summary><span class="qm">Q</span>欠席した場合はどうなりますか？<span class="chev">▾</span></summary><div class="ans">日程は隔週を含む全4回の連続コースです。やむを得ず欠席される場合の対応については、お申し込み前にお気軽にお問い合わせください。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Apply ===== -->
+<section class="apply" id="apply">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">先行案内（ウェイトリスト）</span>
+      <h2 class="sec-title">開講したら、いちばんに。</h2>
+      <p class="sec-lead">中3版は現在<strong style="color:#fff">開講検討中</strong>です。下記にご登録いただくと、<strong style="color:#fff">開講の可否・日程・早割が決まり次第、登録者へ優先してご案内</strong>します（登録は無料・この時点でのお申し込み確定ではありません）。</p>
+    </div>
+
+    <form class="form-wrap reveal" id="apply-form" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="parent-name">保護者氏名<span class="req">必須</span></label>
+          <input type="text" id="parent-name" name="parent-name" autocomplete="name" required placeholder="例）山田 花子" />
+        </div>
+        <div class="field">
+          <label for="student-name">お子さま氏名<span class="req">必須</span></label>
+          <input type="text" id="student-name" name="student-name" required placeholder="例）山田 太郎" />
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="grade">学年<span class="req">必須</span></label>
+          <select id="grade" name="grade" required>
+            <option value="" disabled selected>選択してください</option>
+            <option>中学2年</option>
+            <option>中学3年</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="phone">電話番号<span class="req">必須</span></label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="例）090-1234-5678" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">メールアドレス<span class="req">必須</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required placeholder="例）example@email.com" />
+      </div>
+
+      <div class="field">
+        <label for="message">ご質問・ご要望（任意）</label>
+        <textarea id="message" name="message" placeholder="英語の学習状況や、気になる点があればご記入ください。"></textarea>
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" id="consent" name="consent" required />
+        <span>個人情報を、本コースの先行ご案内・ご連絡の目的で利用することに同意します。</span>
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-lg" id="btn-submit-form">先行案内に登録する（無料）→</button>
+      <div class="form-status-msg" id="form-status" role="status" aria-live="polite"></div>
+
+      <p class="form-note">送信がうまくいかない場合は、<a href="mailto:info.winbe.umegaoka@gmail.com">info.winbe.umegaoka@gmail.com</a> または <a href="tel:0354263006">03-5426-3006</a> へ直接ご連絡ください。</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site">
+  <div class="wrap f-grid">
+    <div>
+      <div class="brand" style="font-family:var(--display);font-weight:900;font-size:1.05rem">中3文法マスターコース with Pomodoro</div>
+      <div style="max-width:24em">公立中3の難所文法を、この夏ひと月で。高校受験の天王山を「復習」で乗り越える。</div>
+    </div>
+    <div class="f-contact">
+      <div><strong style="color:#fff">WinBe梅ヶ丘校</strong></div>
+      <div>〒154-0022 東京都世田谷区梅丘1-25-6</div>
+      <div>小田急線「梅ヶ丘」駅 南口 徒歩30秒</div>
+      <div>TEL：<a href="tel:0354263006">03-5426-3006</a></div>
+      <div>Email：<a href="mailto:info.winbe.umegaoka@gmail.com">info.winbe.umegaoka@gmail.com</a></div>
+    </div>
+  </div>
+  <div class="wrap copy">© 2026 WinBe梅ヶ丘校 ｜ 中3文法マスターコース with Pomodoro</div>
+</footer>
+
+<!-- ===== Mobile sticky CTA ===== -->
+<div class="mobile-cta"><a href="#apply" class="btn btn-primary">先行案内に登録する（無料）→</a></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

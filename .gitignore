@@ -1,0 +1,61 @@
+# ==========================================================================
+#  Security .gitignore for the PUBLIC deploy artifact repo (defense in depth).
+#  This repo must contain ONLY generated public web files
+#  (.html .css .js .svg .png .jpg + _redirects + README). Everything below is
+#  blocked so that source / personal data / secrets can never be committed even
+#  if accidentally copied into _deploy.
+# ==========================================================================
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+desktop.ini
+*.swp
+
+# Personal data / spreadsheets / exports (e.g. real Google Form responses)
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.numbers
+
+# Secrets / credentials / keys
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.pkcs12
+id_rsa*
+id_ed25519*
+*.credentials
+*credential*
+*secret*
+*token*
+service-account*.json
+
+# Internal planning / source docs that must never reach the public site
+HANDOFF.md
+PUBLISH_READINESS.md
+DEPLOY.md
+CLAUDE.md
+AGENTS.md
+Agents.md
+schedule.md
+lp_source.md
+course_overview.md
+*_setup.md
+*_playbook.md
+*_strategy.md
+*_summary.md
+*_critique.md
+*_proposals*.md
+winbe_umegaoka_context.md
+decision_*.md
+
+# Build tooling / temp
+*.ps1
+_deploy/
+*.tmp
+_*.html

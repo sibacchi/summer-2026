@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="英語で本格的な自由研究を完成！小学生向けサマーコース「グローバル・リサーチャーズ（Global Researchers）」公式サイト。4日間で科学的思考と英語表現力を優しく育むプログラム。">
+  <title>グローバル・リサーチャーズ | 世界が驚く自由研究を英語で</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Decorative Pastel Orbs -->
+  <div class="orb orb-1" id="bg-orb-1"></div>
+  <div class="orb orb-2" id="bg-orb-2"></div>
+  <div class="orb orb-3" id="bg-orb-3"></div>
+
+  <!-- Navigation Bar -->
+  <header id="main-header">
+    <div class="header-container">
+      <a href="#" class="logo" id="header-logo">
+        <span class="logo-icon"><i class="fa-solid fa-flask-vial"></i></span>
+        <span class="logo-text">Global Researchers</span>
+      </a>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#intro" id="nav-link-intro">教育方針</a></li>
+          <li><a href="#about" id="nav-link-about">コースの特徴</a></li>
+          <li><a href="#growth-principle" id="nav-link-principle">成長の仕組み</a></li>
+          <li><a href="#schedule" id="nav-link-schedule">カリキュラム</a></li>
+          <li><a href="#themes" id="nav-link-themes">研究トラック</a></li>
+          <li><a href="#outline" id="nav-link-outline">開催概要</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="#apply-form-section" class="btn btn-primary btn-sm" id="header-btn-apply">お問合せ・体験受付</a>
+      </div>
+      <button class="mobile-menu-toggle" id="btn-mobile-menu" aria-label="メニューを開閉">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content fade-in-up">
+        <div class="badge-container">
+          <span class="badge" id="hero-badge-duration"><i class="fa-regular fa-calendar-days"></i> 夏休み短期 4日間</span>
+          <span class="badge" id="hero-badge-target"><i class="fa-solid fa-graduation-cap"></i> 小学校中〜高学年対象</span>
+          <span class="badge" id="hero-badge-level"><i class="fa-solid fa-language"></i> 英検5級〜4級レベルから歓迎</span>
+        </div>
+        <h1 class="hero-title" id="hero-main-title">
+          子供たちの「なぜ？」を<br>
+          <span class="text-gradient">英語の探究力に変える夏</span>
+        </h1>
+        <p class="hero-lead" id="hero-lead-text">
+          身の回りのささやかな疑問から仮説を立て、実験し、記録する。グローバル・リサーチャーズは、英語での本格的な科学研究プロセスを通じて、一生ものの論理的思考力と自己表現力を育む4日間のサマープログラムです。
+        </p>
+        <div class="hero-actions">
+          <a href="#apply-form-section" class="btn btn-primary btn-lg" id="hero-btn-primary">お問合せ・お申込み</a>
+          <a href="#about" class="btn btn-secondary btn-lg" id="hero-btn-secondary">プログラムの特徴</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in-up delay-200">
+        <div class="visual-wrapper">
+          <img src="assets/lab_hero.png" alt="子供たちが笑顔で科学実験と発表に取り組むイメージ" class="hero-img" id="hero-visual-image">
+          <div class="visual-deco-card glass" id="hero-deco-card-1">
+            <span class="deco-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <div>
+              <p class="deco-title">Observation</p>
+              <p class="deco-desc">じっくりと観察する</p>
+            </div>
+          </div>
+          <div class="visual-deco-card glass" id="hero-deco-card-2">
+            <span class="deco-icon"><i class="fa-solid fa-lightbulb"></i></span>
+            <div>
+              <p class="deco-title">Hypothesis</p>
+              <p class="deco-desc">仮説を考えてみる</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section (教育理念・導入) -->
+  <section id="intro" class="section intro-section scroll-reveal">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">EDUCATION PHILOSOPHY</span>
+        <h2 class="section-title">子供たちの「なぜ？」から始まる、特別な夏</h2>
+        <p class="section-subtitle">私たちは、暗記だけの英語学習を超えた「生きた学び」を提供します</p>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-card glass scroll-reveal-up">
+          <div class="intro-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>知的好奇心の芽を育む</h3>
+          <p class="intro-text">
+            「いつものジュースには角砂糖が何個ぶん隠れているの？」「色が変わると液体の正体が分かるの？」日常にある小さな疑問を出発点にし、子供たちが主体的に考える「探究心」を丁寧に育てます。
+          </p>
+        </div>
+        <div class="intro-card glass scroll-reveal-up delay-100">
+          <div class="intro-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>英語で論理的に考える力</h3>
+          <p class="intro-text">
+            英語を単なる言葉として覚えるのではなく、「仮説・実験・検証」という科学的アプローチの道具として使います。英検ライティングでも重視される論理構造が、体験を通して自然と身につきます。
+          </p>
+        </div>
+        <div class="intro-card glass scroll-reveal-up delay-200">
+          <div class="intro-icon"><i class="fa-solid fa-award"></i></div>
+          <h3>学校に提出できる本物の成果</h3>
+          <p class="intro-text">
+            4日間の最後には、学校の夏休みの宿題としてそのまま提出できる「本格的な英語研究ポスター」を完成させてお持ち帰りいただけます。学校の先生や友人にも自信を持って見せられるクオリティです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section (3大特徴) -->
+  <section id="about" class="section about-section scroll-reveal">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">OUR FEATURES</span>
+        <h2 class="section-title">グローバル・リサーチャーズ 3つの教育的特徴</h2>
+        <p class="section-subtitle">子供たちが自ら探究し、成長するための独自のカリキュラム設計</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Feature 1 -->
+        <div class="about-card glass scroll-reveal-left">
+          <div class="card-icon-wrapper"><i class="fa-solid fa-file-signature"></i></div>
+          <h3>1. 誇りを持って学校に提出できる「英語研究ポスター」</h3>
+          <p>
+            当プログラムでは、背景・仮説・実験・結果・考察という世界基準の科学的プロセスを英語で一枚にまとめた、美しい発表ポスター（またはレポート）を作成します。子供たちが自分の力で完成させた成果物は、学校での提出物としても大変価値のあるものです。
+          </p>
+          <div class="card-highlight">
+            夏休みの自由研究を高い充実感とともに終わらせることができ、保護者の方のサポート負担も軽減します。
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="about-card glass scroll-reveal-right">
+          <div class="card-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
+          <h3>2. アカデミックとテーマを繋ぐ「二重構造」の語彙習得</h3>
+          <p>
+            英語表現は、実際の研究活動を通じて「使う必要性」に迫られた状況でこそ真に定着します。論理的プロセスに必要な「共通語彙」と、自身が選んだ研究対象に特化した「テーマ別語彙」を組み合わせ、多角的に語彙力を強化します。
+          </p>
+          <div class="card-highlight">
+            体験と結びついた語彙学習は、ただの単語テスト用ではない「自分の言葉」としての深い記憶定着を生み出します。
+          </div>
+          <div class="vocabulary-infographic">
+            <div class="infographic-column">
+              <span class="info-label">共通アカデミック語彙</span>
+              <span class="info-word">Hypothesis (仮説)</span>
+              <span class="info-word">Experiment (実験)</span>
+            </div>
+            <div class="infographic-column">
+              <span class="info-label">トラック別実践語彙</span>
+              <span class="info-word">Crystal (結晶)</span>
+              <span class="info-word">Acidic (酸性の)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="about-card glass scroll-reveal-up" style="grid-column: 1 / -1;">
+          <div class="card-icon-wrapper"><i class="fa-solid fa-child-reaching"></i></div>
+          <h3>3. 『似つかわしくないの法則』を応用した、自信と能力の引き上げ</h3>
+          <p>
+            「英語で科学の研究発表を行う」という、子供たちの現在の語彙力からすると「一見似つかわしくない（高すぎる）」と思えるほどの本格的な役割と発表の舞台をあえて用意します。これは教育心理学でいう<strong>ピグマリオン効果</strong>（高い期待が本人の実力を引き上げる現象）を、役割・外見の先行付与にまで広げた独自の設計です。
+            「研究者として堂々と振る舞う」ことを先に行うことで、本人の自己認識が劇的に高まり、実力がその高い役割に引っ張られるように追いついていきます。
+          </p>
+          <div class="card-highlight">
+            「自分は英語で科学を語れる」という高いセルフイメージが確立され、英検3級レベル程度の壁は「容易にクリアできるもの」へと変化します。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Growth Principle Section (似つかわしくないの法則の解説) -->
+  <section id="growth-principle" class="section principle-section scroll-reveal">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">GROWTH SYSTEM</span>
+        <h2 class="section-title">成長のヒント：『似つかわしくないの法則』</h2>
+        <p class="section-subtitle">教育心理学の「ピグマリオン効果」を、役割・外見の先行付与にまで広げた独自メソッド。「役割」を先に与えることで、子供たちが本来持っているポテンシャルを大きく引き出します</p>
+      </div>
+
+      <div class="principle-content-grid">
+        <!-- Story Column -->
+        <div class="story-column glass scroll-reveal-left">
+          <div class="story-header">
+            <span class="story-icon"><i class="fa-solid fa-comment-dots"></i></span>
+            <h3>ラジャマン君の日本語自己紹介</h3>
+          </div>
+          <p class="story-text">
+            来日半年のインド人留学生ラジャマン君が、自己紹介で「こんにちは、ラジャマンです。日本に来て半年になります。今は量子力学の研究をしております。こんな環境で世界にインパクトを与える成果が出せたら幸せです。どうぞよろしくお願いします」と、<strong>大変流暢な日本語</strong>で挨拶したとします。
+          </p>
+          <p class="story-text">
+            これを聞いた誰もが「彼は日本語がとても上手で優秀な人だ」と認識し、ネイティブのような日本語で彼に話しかけるようになります。
+            実は<strong>「その挨拶文だけを完璧に暗記していただけ」</strong>だったとしても、周囲の扱いが「日本語ができる人」になり、本人もその扱いに合わせて必死に努力するため、結果的に本当にそのレベルの日本語を話せるようになっていきます。
+          </p>
+          <div class="story-footer-note">
+            <i class="fa-solid fa-circle-info"></i>
+            「外見や振る舞い（役割）が先行し、後から能力の実態が追いつく」というこの心理現象は、教育心理学の<strong>ピグマリオン効果</strong>（ローゼンタールの実験）や<strong>自己知覚理論</strong>とも重なります。プログラム全体の成長設計として取り入れています。
+          </div>
+        </div>
+
+        <!-- System Column (Infographic steps) -->
+        <div class="system-column scroll-reveal-right">
+          <h3>「役割先行」で実力を伸ばす4つのステップ</h3>
+          <div class="step-list">
+            <!-- Step 1 -->
+            <div class="step-item glass">
+              <div class="step-num">1</div>
+              <div class="step-info">
+                <h4>研究者としての振る舞い (The Role)</h4>
+                <p>白衣を着用し、「英語で研究発表を行う科学者」としてのミッションを授与され、その役割になりきります。白衣を着るだけで集中力・遂行力が高まる「着衣認知（Enclothed Cognition）」の効果も後押しします。</p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="step-item glass">
+              <div class="step-num">2</div>
+              <div class="step-info">
+                <h4>周囲からの評価と期待 (Expectation)</h4>
+                <p>英語での堂々とした仮説提示や発表スピーチを見て、保護者や先生から「英語で研究ができる子」として認められます。</p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="step-item glass">
+              <div class="step-num">3</div>
+              <div class="step-info">
+                <h4>セルフイメージの確立 (Self-Image)</h4>
+                <p>「自分はグローバルな視点を持つリサーチャーだ」という知的自尊心が本人の中に芽生えます。</p>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="step-item glass">
+              <div class="step-num">4</div>
+              <div class="step-info">
+                <h4>能力の実態が追いつく (Competence Catch-up)</h4>
+                <p>セルフイメージに引っ張られる形で論理的思考力と英語力が急速に発達。英検3級程度は余裕で突破できる実力が身につきます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="section schedule-section scroll-reveal">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">CURRICULUM</span>
+        <h2 class="section-title">4日間＋「家庭観察ウィーク」の流れ</h2>
+        <p class="section-subtitle">教室で2日 → 家でじっくり1週間データを集める → 教室で2日。本物の研究になる独自の構成です</p>
+      </div>
+
+      <!-- Hybrid Flow Timeline -->
+      <div class="schedule-flow" id="schedule-flow">
+        <div class="flow-step glass">
+          <span class="flow-badge">STEP 1</span>
+          <span class="flow-days">Day 1–2</span>
+          <span class="flow-date">7/29(水)・30(木)</span>
+          <p class="flow-desc">研究者に任命され、テーマ決め・仮説づくり・実験のスタート</p>
+        </div>
+        <div class="flow-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+        <div class="flow-step flow-step-home">
+          <span class="flow-badge flow-badge-home">家庭観察ウィーク</span>
+          <span class="flow-days"><i class="fa-solid fa-house-chimney-window"></i> 中 1 週間</span>
+          <span class="flow-date">7/31 〜 8/4</span>
+          <p class="flow-desc">家で毎日データを記録（＝研究の本体）。結晶を育て、液体を測り、砂糖を数える</p>
+        </div>
+        <div class="flow-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+        <div class="flow-step glass">
+          <span class="flow-badge">STEP 2</span>
+          <span class="flow-days">Day 3–4</span>
+          <span class="flow-date">8/5(水)・6(木)</span>
+          <p class="flow-desc">データを考察しポスター完成 → 最終日は保護者を招いた英語研究発表会</p>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="schedule-tab-nav" id="schedule-tabs">
+        <button class="tab-btn active" data-day="1" id="btn-tab-day1">Day 1<span>テーマ決定と仮説</span></button>
+        <button class="tab-btn" data-day="2" id="btn-tab-day2">Day 2<span>実験と記録</span></button>
+        <button class="tab-btn" data-day="3" id="btn-tab-day3">Day 3<span>考察とポスター作成</span></button>
+        <button class="tab-btn" data-day="4" id="btn-tab-day4">Day 4<span>英語研究発表会</span></button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="schedule-tab-content glass" id="schedule-content-panel">
+        <!-- Day 1 Panel -->
+        <div class="tab-panel active" data-day="1" id="panel-day1">
+          <div class="panel-grid">
+            <div class="panel-info">
+              <span class="day-label">Day 1</span>
+              <h3>テーマ選びと仮説立案</h3>
+              <p class="panel-desc">
+                まずは全員で「研究者」としての任命式を行います。日常の中で感じる不思議な現象から研究テーマを決め、英語のワークシートに「なぜその結果になるのか？」という仮説（Hypothesis）をまとめます。
+              </p>
+              <div class="key-vocabulary">
+                <h4><i class="fa-solid fa-graduation-cap"></i> 本日の主な共通英語表現:</h4>
+                <div class="vocab-tags">
+                  <span>Observation (観察)</span>
+                  <span>Question (疑問)</span>
+                  <span>Hypothesis (仮説)</span>
+                </div>
+              </div>
+            </div>
+            <div class="panel-activity">
+              <h4>本日のアクティビティ</h4>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> 科学者任命式と白衣・実験ノートの授与</li>
+                <li><i class="fa-solid fa-check"></i> 4つの研究トラックから自分のテーマを選択</li>
+                <li><i class="fa-solid fa-check"></i> 英語での「仮説立案」ワークシート作成</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 Panel -->
+        <div class="tab-panel" data-day="2" id="panel-day2">
+          <div class="panel-grid">
+            <div class="panel-info">
+              <span class="day-label">Day 2</span>
+              <h3>実験・調査・データ収集</h3>
+              <p class="panel-desc">
+                テーマに沿って実際に手を動かし、実験や観察を行います。英語で数値を測定（Measure）し記録（Record）する練習をしたら、<strong>家庭観察キットを持ち帰り</strong>、続く1週間の毎日の記録ミッションに挑みます。
+              </p>
+              <div class="key-vocabulary">
+                <h4><i class="fa-solid fa-graduation-cap"></i> 本日の主な共通英語表現:</h4>
+                <div class="vocab-tags">
+                  <span>Experiment (実験)</span>
+                  <span>Measure (測定)</span>
+                  <span>Record (記録)</span>
+                </div>
+              </div>
+            </div>
+            <div class="panel-activity">
+              <h4>本日のアクティビティ</h4>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> 教室での実験・計測と記録の練習</li>
+                <li><i class="fa-solid fa-check"></i> 家庭観察キットの受け取りと使い方の習得</li>
+                <li><i class="fa-solid fa-check"></i> 1週間の「毎日記録ミッション」スタート</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 Panel -->
+        <div class="tab-panel" data-day="3" id="panel-day3">
+          <div class="panel-grid">
+            <div class="panel-info">
+              <span class="day-label">Day 3</span>
+              <h3>結果整理・考察・資料作成</h3>
+              <p class="panel-desc">
+                家庭観察ウィークで集めたデータを持ち寄り、グラフや表にして結果（Result）をまとめます。仮説が正しかったかを振り返り、 because（なぜなら）や therefore（したがって）を用いて論理的に説明する発表用ポスターを作成します。
+              </p>
+              <div class="key-vocabulary">
+                <h4><i class="fa-solid fa-graduation-cap"></i> 本日の主な共通英語表現:</h4>
+                <div class="vocab-tags">
+                  <span>Result (結果)</span>
+                  <span>Because (なぜなら)</span>
+                  <span>Therefore (したがって)</span>
+                </div>
+              </div>
+            </div>
+            <div class="panel-activity">
+              <h4>本日のアクティビティ</h4>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> 英語のデータグラフ・表の作成</li>
+                <li><i class="fa-solid fa-check"></i> 原因と結果を結ぶスピーチ原稿の作成</li>
+                <li><i class="fa-solid fa-check"></i> 発表用ポスターと提出用レポートの仕上げ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 4 Panel -->
+        <div class="tab-panel" data-day="4" id="panel-day4">
+          <div class="panel-grid">
+            <div class="panel-info">
+              <span class="day-label">Day 4</span>
+              <h3>研究発表会（英語プレゼンテーション）</h3>
+              <p class="panel-desc">
+                最終日は、保護者の方々をお招きした英語研究発表会です。自身が発見したことや実験の成果を、スライドやポスターを指し示しながら堂々と英語でプレゼンテーションし、最後は認定証を授与されます。
+              </p>
+              <div class="key-vocabulary">
+                <h4><i class="fa-solid fa-graduation-cap"></i> 本日の主な共通英語表現:</h4>
+                <div class="vocab-tags">
+                  <span>Presentation (発表)</span>
+                  <span>Conclusion (結論)</span>
+                  <span>Researcher (研究者)</span>
+                </div>
+              </div>
+            </div>
+            <div class="panel-activity">
+              <h4>本日のアクティビティ</h4>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> 英語プレゼンテーションの最終練習</li>
+                <li><i class="fa-solid fa-check"></i> 保護者の前でのポスターセッション発表</li>
+                <li><i class="fa-solid fa-check"></i> 「グローバル・リサーチャー認定証」授与式</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Themes Section (テーマカタログ) -->
+  <section id="themes" class="section themes-section scroll-reveal">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">RESEARCH TRACKS</span>
+        <h2 class="section-title">選べる4つの研究トラック</h2>
+        <p class="section-subtitle">専用キットと教材を作り込んだ4トラックから、お子様に合った研究を1つ選びます</p>
+      </div>
+
+      <div class="themes-grid">
+        <!-- Track 1: Crystal Lab -->
+        <div class="theme-card glass scroll-reveal-up" id="theme-card-1">
+          <div class="theme-badge">💎 実験系 (Experiment)</div>
+          <h3 class="theme-title">クリスタル・ラボ</h3>
+          <p class="theme-desc">砂糖・塩・みょうばん、どれが一番大きくきれいな結晶になる？ 1週間かけて本物の結晶を育て、毎日大きさを測って比べます。キラキラの実物が手元に残ります。</p>
+          <div class="theme-footer">
+            <span class="vocab-label">トラック別の習得単語例:</span>
+            <div class="theme-vocabs">
+              <span>Crystal (結晶)</span>
+              <span>Dissolve (溶ける)</span>
+              <span>Grow (育つ)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 2: Green Lab -->
+        <div class="theme-card glass scroll-reveal-up delay-100" id="theme-card-2">
+          <div class="theme-badge">🌱 観察系 (Observation)</div>
+          <h3 class="theme-title">グリーン・ラボ</h3>
+          <p class="theme-desc">日向と日陰で、植物はどっちが速く育つ？ 条件を変えて比較栽培し、成長グラフにまとめます。王道にして「本物の自由研究」、学校提出の鉄板テーマです。</p>
+          <div class="theme-footer">
+            <span class="vocab-label">トラック別の習得単語例:</span>
+            <div class="theme-vocabs">
+              <span>Plant (植物)</span>
+              <span>Sunlight (日光)</span>
+              <span>Measure (測る)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 3: Color Magic Lab -->
+        <div class="theme-card glass scroll-reveal-up delay-200" id="theme-card-3">
+          <div class="theme-badge">🌈 実験系 (Experiment)</div>
+          <h3 class="theme-title">カラーマジック・ラボ</h3>
+          <p class="theme-desc">紫キャベツ液を使い、身の回りの15種の液体が酸性〜アルカリ性の"ものさし"のどこに来るかを予想→検証。予想を裏切る液体が必ず現れ、自分だけの法則を発見します。</p>
+          <div class="theme-footer">
+            <span class="vocab-label">トラック別の習得単語例:</span>
+            <div class="theme-vocabs">
+              <span>Color (色)</span>
+              <span>Predict (予想する)</span>
+              <span>Sour (酸っぱい)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 4: Food Detective -->
+        <div class="theme-card glass scroll-reveal-up delay-300" id="theme-card-4">
+          <div class="theme-badge">🕵️ 調査系 (Survey)</div>
+          <h3 class="theme-title">フード・ディテクティブ</h3>
+          <p class="theme-desc">「甘そうに見える順」と「本当に砂糖が多い順」はズレている？ 成分表示を調べ、角砂糖◯個分で可視化。見た目のウソを暴く"探偵研究"で、いつもの飲み物の驚きを発見します。</p>
+          <div class="theme-footer">
+            <span class="vocab-label">トラック別の習得単語例:</span>
+            <div class="theme-vocabs">
+              <span>Compare (比べる)</span>
+              <span>Sugar (砂糖)</span>
+              <span>Cube (角砂糖)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section faq-section scroll-reveal">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">よくあるご質問</h2>
+        <p class="section-subtitle">保護者の方からよくいただくご質問に回答します</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item glass scroll-reveal-up">
+          <button class="faq-question">
+            <span>英語に不安がありますが、参加できますか？</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              もちろん大歓迎です。対象の英語レベルは英検5級〜4級（簡単な単語や会話）程度を想定していますが、当コースではあらかじめ論理的な発言を行える「英語の発表テンプレート」を用意しています。最初はこれを模倣して発表することで、無理なく高度なプレゼンテーションを行うことができ、それが本人の自信（似つかわしくないの法則）に繋がります。日英どちらも話せるバイリンガル講師と教室長の2名体制で、丁寧にサポートします。
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item glass scroll-reveal-up delay-100">
+          <button class="faq-question">
+            <span>本当に学校の自由研究として提出できますか？</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              はい、そのまま提出できる形式（英語研究ポスターと、日英対訳つきのレポート一式）を完成させてお持ち帰りいただきます。表紙・目次をつけた研究レポートとして綴じ、自由研究のプロセス（背景・仮説・方法・結果・考察）に完全に則っているため、学校のクラスメイトや先生からも高い評価を受けることができます。
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item glass scroll-reveal-up delay-200">
+          <button class="faq-question">
+            <span>最終日の発表会は見学できますか？</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              はい、Day 4の発表会は保護者の方々にもご自由にご参観いただけます。子供たちが白衣を着て、自作のポスターを指し示しながら、自分の言葉で堂々と英語で研究を説明する姿をぜひご覧ください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Outline Section (開催概要) -->
+  <section id="outline" class="section outline-section scroll-reveal">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">COURSE OUTLINE</span>
+        <h2 class="section-title">開催概要</h2>
+        <p class="section-subtitle">2026年 夏休み短期開催。少人数制のため、お早めのお問合せをおすすめします</p>
+      </div>
+
+      <div class="outline-card glass scroll-reveal-up">
+        <dl class="outline-list">
+          <div class="outline-row outline-row-highlight">
+            <dt><i class="fa-solid fa-yen-sign"></i> 参加費</dt>
+            <dd><strong class="outline-price">¥25,000</strong><span class="outline-note">（税込）／ 4日間パッケージ（90分 × 4日 ＝ 計6時間）</span></dd>
+          </div>
+          <div class="outline-row">
+            <dt><i class="fa-regular fa-calendar-days"></i> 実施日</dt>
+            <dd>
+              <span class="outline-phase"><b>Day 1–2</b> 7/29(水)・7/30(木)</span>
+              <span class="outline-phase outline-phase-home"><b>家庭観察ウィーク</b> 7/31〜8/4（家で毎日記録）</span>
+              <span class="outline-phase"><b>Day 3–4</b> 8/5(水)・8/6(木)</span>
+            </dd>
+          </div>
+          <div class="outline-row">
+            <dt><i class="fa-regular fa-clock"></i> 時間</dt>
+            <dd>各日 <b>13:00–14:30</b>（90分）</dd>
+          </div>
+          <div class="outline-row">
+            <dt><i class="fa-solid fa-microphone-lines"></i> 研究発表会</dt>
+            <dd>最終日 8/6(木) に開催 ／ <span class="outline-note">保護者の方の見学歓迎</span></dd>
+          </div>
+          <div class="outline-row">
+            <dt><i class="fa-solid fa-users"></i> 定員</dt>
+            <dd>各クラス <strong>6名</strong> の少人数制（1トラック1〜2名）</dd>
+          </div>
+          <div class="outline-row">
+            <dt><i class="fa-solid fa-graduation-cap"></i> 対象</dt>
+            <dd>小学校 中〜高学年 ／ 英検5級〜4級レベルから歓迎（新規・在籍どちらも可）</dd>
+          </div>
+          <div class="outline-row">
+            <dt><i class="fa-solid fa-chalkboard-user"></i> 講師</dt>
+            <dd>日英バイリンガル講師（主担当）＋ 教室長・村中（補助）の2名体制</dd>
+          </div>
+          <div class="outline-row">
+            <dt><i class="fa-solid fa-location-dot"></i> 会場</dt>
+            <dd>WinBe 梅ヶ丘校</dd>
+          </div>
+          <div class="outline-row">
+            <dt><i class="fa-solid fa-gift"></i> 持ち物・特典</dt>
+            <dd>白衣・実験ノートなど「研究者キット」一式つき ／ 修了証書を授与</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply / Form Section -->
+  <section id="apply-form-section" class="section cta-section scroll-reveal">
+    <div class="container cta-container glass">
+      <div class="cta-content-wrapper">
+        <div class="cta-intro scroll-reveal-left">
+          <h2>この夏、世界に届く探究を始めよう！</h2>
+          <p>
+            「グローバル・リサーチャーズ」で、英語を使って自ら考え、仮説を立て、表現する楽しさを体験しませんか？<br>
+            夏休みの宿題を高い充実感とともに終わらせ、子供の自己イメージを大きく引き上げる4日間。<br>
+            ご質問や体験レッスンのご相談など、お気軽にお問い合わせください。
+          </p>
+          <div class="cta-features">
+            <div><i class="fa-solid fa-square-check"></i> 参加費：¥25,000（税込・4日間パッケージ）</div>
+            <div><i class="fa-solid fa-square-check"></i> 実施日：7/29・30 → 8/5・6（家庭観察ウィークを挟む）</div>
+            <div><i class="fa-solid fa-square-check"></i> 少人数：各クラス6名定員（1トラック1〜2名）</div>
+            <div><i class="fa-solid fa-square-check"></i> 研究者キット（白衣・実験ノート等）一式つき</div>
+          </div>
+        </div>
+
+        <div class="cta-form-wrapper scroll-reveal-right" id="form-container">
+          <form class="cta-form" id="apply-form" novalidate>
+            <h3 class="form-title">お申し込み・お問い合わせ</h3>
+            <p class="form-lead">下記フォームから送信ください。空き状況を確認のうえ、担当より折り返しご連絡します。ご質問のみでもお気軽にどうぞ。</p>
+
+            <div class="form-group">
+              <label for="parent-name">保護者様のお名前 <span class="required">*</span></label>
+              <input type="text" id="parent-name" name="parent-name" placeholder="山田 太郎" required>
+            </div>
+
+            <div class="form-group">
+              <label for="student-name">お子様のお名前 <span class="required">*</span></label>
+              <input type="text" id="student-name" name="student-name" placeholder="山田 花子" required>
+            </div>
+
+            <div class="form-group">
+              <label>お子様のふりがな・学年 <span class="required">*</span></label>
+              <div class="form-inline">
+                <input type="text" id="student-kana" name="student-kana" placeholder="やまだ はなこ" required>
+                <select id="student-grade" name="student-grade" required>
+                  <option value="" disabled selected>学年を選択</option>
+                  <option value="小3">小学校3年生</option>
+                  <option value="小4">小学校4年生</option>
+                  <option value="小5">小学校5年生</option>
+                  <option value="小6">小学校6年生</option>
+                  <option value="その他">その他・要相談</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="tel">電話番号 <span class="required">*</span></label>
+              <input type="tel" id="tel" name="tel" placeholder="090-0000-0000" required>
+            </div>
+
+            <div class="form-group">
+              <label>WinBe梅ヶ丘校のご利用 <span class="required">*</span></label>
+              <div class="choice-group">
+                <label class="choice"><input type="radio" name="status" value="新規" required><span>はじめて（新規）</span></label>
+                <label class="choice"><input type="radio" name="status" value="在籍生"><span>在籍生です</span></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="track1">ご希望の研究トラック・第1希望 <span class="required">*</span></label>
+              <select id="track1" name="track1" required>
+                <option value="" disabled selected>第1希望を選択</option>
+                <option value="💎 クリスタル・ラボ">💎 クリスタル・ラボ（結晶を育てる）</option>
+                <option value="🌱 グリーン・ラボ">🌱 グリーン・ラボ（植物の比較栽培）</option>
+                <option value="🌈 カラーマジック・ラボ">🌈 カラーマジック・ラボ（色で液体を見破る）</option>
+                <option value="🕵️ フード・ディテクティブ">🕵️ フード・ディテクティブ（かくれた砂糖）</option>
+                <option value="おまかせ・相談したい">まだ決められない・相談したい</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="track2">研究トラック・第2希望（任意）</label>
+              <select id="track2" name="track2">
+                <option value="" selected>第2希望があれば選択</option>
+                <option value="💎 クリスタル・ラボ">💎 クリスタル・ラボ</option>
+                <option value="🌱 グリーン・ラボ">🌱 グリーン・ラボ</option>
+                <option value="🌈 カラーマジック・ラボ">🌈 カラーマジック・ラボ</option>
+                <option value="🕵️ フード・ディテクティブ">🕵️ フード・ディテクティブ</option>
+              </select>
+              <p class="field-note">少人数制（1トラック1〜2名）のため、第2希望を伺っています。</p>
+            </div>
+
+            <div class="form-group">
+              <label for="allergy">アレルギー・健康面で配慮が必要なこと（任意）</label>
+              <textarea id="allergy" name="allergy" rows="2" placeholder="食物アレルギー、体質など。安全運営のため把握させていただきます。"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>発表会・活動写真の掲載 <span class="required">*</span></label>
+              <div class="choice-group">
+                <label class="choice"><input type="radio" name="photo-consent" value="掲載可" required><span>可（紹介等に利用OK）</span></label>
+                <label class="choice"><input type="radio" name="photo-consent" value="掲載不可"><span>不可</span></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">ご質問・ご要望（任意）</label>
+              <textarea id="message" name="message" rows="3" placeholder="お子様の現在の英語学習状況や、ご不安な点があれば何でもご記入ください。"></textarea>
+            </div>
+
+            <div class="consent-box">
+              <label class="consent">
+                <input type="checkbox" id="agree" name="agree" value="同意する" required>
+                <span><a href="#" id="terms-link">利用規約・キャンセルポリシー</a>に同意します <span class="required">*</span></span>
+              </label>
+              <details class="terms-details">
+                <summary>キャンセルポリシーを確認する</summary>
+                <div class="terms-body">
+                  <p><strong>※下記は確定前のドラフトです（最終内容に差し替えます）。</strong></p>
+                  <ul>
+                    <li>開催14日前まで：全額返金（事務手数料を除く）</li>
+                    <li>開催13〜7日前：受講料の50%</li>
+                    <li>開催6日前〜当日：受講料の100%（教材・キット準備のため）</li>
+                    <li>少人数制のため、お申し込み後のキャンセルはお早めにご連絡ください。</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form">この内容で申し込む</button>
+            <div class="form-status-msg" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <a href="#" class="footer-logo" id="footer-logo">
+          <span class="logo-icon"><i class="fa-solid fa-flask-vial"></i></span>
+          <span class="logo-text">Global Researchers</span>
+        </a>
+        <p>eiken-lab & eiken-writing 提携サマープログラム</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#intro" id="footer-link-intro">教育方針</a></li>
+          <li><a href="#about" id="footer-link-about">特徴</a></li>
+          <li><a href="#growth-principle" id="footer-link-principle">似つかわしくないの法則</a></li>
+          <li><a href="#schedule" id="footer-link-schedule">カリキュラム</a></li>
+          <li><a href="#themes" id="footer-link-themes">研究トラック</a></li>
+          <li><a href="#outline" id="footer-link-outline">開催概要</a></li>
+        </ul>
+      </div>
+      <p class="copyright">&copy; 2026 Global Researchers Summer Program. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

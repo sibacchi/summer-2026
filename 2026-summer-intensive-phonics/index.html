@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>集中フォニックスコース 〜100単語攻略講座〜 | 2026年夏期 WinBe梅ヶ丘校</title>
+<meta name="description" content="たった4回のレッスンで、英単語を100語以上読めるようになる。フォニックスの仕組みで「丸暗記」から卒業する、本気の短期集中講座（初級編）。対象は小学3年生〜中1の英語初学者。WinBe梅ヶ丘校・2026年夏期。定員5名・全額返金保証。" />
+<meta property="og:title" content="集中フォニックスコース 〜100単語攻略講座〜" />
+<meta property="og:description" content="たった4回で、英単語を100語以上読めるようになる。本気の短期集中講座。" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0a0e14;          /* ほぼ黒 */
+    --ink-soft: #3a3f47;
+    --paper: #ffffff;
+    --paper-warm: #f7f5f1;   /* オフホワイト */
+    --line: #e3e0d8;
+    --line-strong: #c9c5ba;
+    --accent: #b8472f;       /* 上品な暖色（締切・CTA） */
+    --accent-deep: #9a3826;
+    --navy: #14203a;         /* 知性の差し色 */
+    --max: 1120px;
+    --ease: cubic-bezier(.16,.84,.44,1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: "Zen Kaku Gothic New", "Inter", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.85;
+    font-size: 16px;
+    letter-spacing: .01em;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .mincho { font-family: "Shippori Mincho", serif; }
+  .num { font-family: "Inter", sans-serif; font-feature-settings: "tnum"; letter-spacing: -.02em; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 760px; }
+
+  section { position: relative; }
+
+  /* ---- reveal ---- */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px;
+    background: rgba(255,255,255,0);
+    transition: background .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease);
+    border-bottom: 1px solid transparent;
+  }
+  .nav.scrolled {
+    background: rgba(255,255,255,.88);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 24px;
+  }
+  .nav__brand { font-size: 13px; letter-spacing: .14em; font-weight: 700; color: var(--ink); }
+  .nav__brand span { display: block; font-size: 10px; letter-spacing: .22em; color: var(--ink-soft); font-weight: 500; margin-top: 2px; }
+  .nav__cta {
+    font-size: 13px; font-weight: 600; letter-spacing: .04em;
+    color: var(--paper); background: var(--ink);
+    padding: 10px 20px; border-radius: 999px; text-decoration: none;
+    transition: background .25s var(--ease), transform .25s var(--ease);
+  }
+  .nav__cta:hover { background: var(--accent); transform: translateY(-1px); }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 100svh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 120px 0 80px;
+    position: relative;
+    background:
+      radial-gradient(120% 80% at 82% 8%, rgba(20,32,58,.05), transparent 60%),
+      var(--paper);
+  }
+  .hero__grid-lines {
+    position: absolute; inset: 0; pointer-events: none; z-index: 0;
+    background-image: linear-gradient(var(--line) 1px, transparent 1px);
+    background-size: 100% clamp(48px, 9vh, 92px);
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 12%, #000 78%, transparent);
+            mask-image: linear-gradient(180deg, transparent, #000 12%, #000 78%, transparent);
+    opacity: .55;
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+
+  .hero__eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: .2em; font-weight: 600; color: var(--ink-soft);
+    margin-bottom: 36px;
+  }
+  .hero__eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--line-strong); }
+
+  .hero__big {
+    display: flex; align-items: baseline; gap: clamp(10px, 2.4vw, 28px);
+    flex-wrap: wrap; line-height: .9;
+  }
+  .hero__big .n {
+    font-family: "Inter", sans-serif; font-weight: 700;
+    font-size: clamp(96px, 26vw, 320px);
+    letter-spacing: -.04em; color: var(--ink);
+  }
+  .hero__big .u {
+    font-family: "Inter", sans-serif; font-weight: 300;
+    font-size: clamp(28px, 6vw, 68px); letter-spacing: -.01em; color: var(--ink);
+  }
+  .hero__big .u em {
+    font-style: normal; color: var(--accent); font-weight: 600;
+  }
+
+  .hero__lead {
+    font-family: "Shippori Mincho", serif; font-weight: 600;
+    font-size: clamp(22px, 4.4vw, 40px); line-height: 1.55;
+    margin: 40px 0 8px; max-width: 18em;
+  }
+  .hero__lead .hl { background: linear-gradient(transparent 62%, rgba(184,71,47,.18) 62%); }
+
+  .hero__sub {
+    font-size: clamp(14px, 2.2vw, 17px); color: var(--ink-soft);
+    max-width: 30em; margin-bottom: 44px;
+  }
+
+  .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 16px; font-weight: 700; letter-spacing: .02em;
+    text-decoration: none; border-radius: 999px;
+    padding: 17px 34px; transition: all .3s var(--ease);
+  }
+  .btn--primary { background: var(--accent); color: #fff; box-shadow: 0 10px 30px -10px rgba(184,71,47,.6); }
+  .btn--primary:hover { background: var(--accent-deep); transform: translateY(-2px); box-shadow: 0 16px 36px -12px rgba(184,71,47,.7); }
+  .btn--primary .arrow { transition: transform .3s var(--ease); }
+  .btn--primary:hover .arrow { transform: translateX(5px); }
+  .btn--ghost { color: var(--ink); border: 1px solid var(--line-strong); }
+  .btn--ghost:hover { border-color: var(--ink); background: var(--ink); color: #fff; }
+
+  .hero__meta { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 40px; font-size: 13px; color: var(--ink-soft); }
+  .hero__meta b { color: var(--ink); font-weight: 700; }
+  .hero__meta .dot { color: var(--accent); }
+
+  /* ============ Section heading ============ */
+  .sec { padding: clamp(80px, 12vh, 150px) 0; }
+  .sec--warm { background: var(--paper-warm); }
+  .sec--dark { background: var(--navy); color: #eef0f4; }
+  .sec--ink { background: var(--ink); color: #f3f1ec; }
+
+  .kicker {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: .22em; font-weight: 600;
+    color: var(--accent); margin-bottom: 22px; text-transform: uppercase;
+  }
+  .kicker::before { content: ""; width: 28px; height: 1px; background: currentColor; opacity: .6; }
+  .sec--dark .kicker, .sec--ink .kicker { color: #d8a08f; }
+
+  .h2 {
+    font-family: "Shippori Mincho", serif; font-weight: 700;
+    font-size: clamp(26px, 5vw, 46px); line-height: 1.4; letter-spacing: .01em;
+  }
+  .h2 + .h2-sub { margin-top: 22px; font-size: clamp(15px,2.3vw,18px); color: var(--ink-soft); max-width: 40em; }
+  .sec--dark .h2-sub, .sec--ink .h2-sub { color: #b9c0cf; }
+
+  /* ============ WHY ============ */
+  .why__lead {
+    font-family: "Shippori Mincho", serif; font-weight: 600;
+    font-size: clamp(20px, 3.6vw, 32px); line-height: 1.7; margin-top: 30px;
+  }
+  .why__lead .em { color: var(--accent); }
+  .why__split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 56px; }
+  .why__card {
+    border: 1px solid var(--line); border-radius: 18px; padding: 34px 30px; background: #fff;
+  }
+  .why__card h3 { font-size: 13px; letter-spacing: .14em; color: var(--ink-soft); font-weight: 700; margin-bottom: 18px; }
+  .why__card .label { display:inline-block; font-size:11px; letter-spacing:.1em; font-weight:700; padding:4px 12px; border-radius:999px; margin-bottom:18px;}
+  .why__card.before .label { background:#f0ede7; color:var(--ink-soft);}
+  .why__card.after .label { background:var(--accent); color:#fff;}
+  .why__card p { font-size: 15px; color: var(--ink-soft); }
+  .why__card .big { font-family:"Inter"; font-weight:700; font-size: clamp(40px,8vw,72px); letter-spacing:-.03em; line-height:1; margin:10px 0 6px; color:var(--ink);}
+  .why__card.after .big { color: var(--accent); }
+
+  .effort {
+    margin-top: 64px; padding: 44px; border-radius: 20px;
+    background: var(--ink); color: #f3f1ec;
+    display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+  }
+  .effort__num { font-family:"Inter"; font-weight:700; font-size: clamp(56px, 12vw, 120px); letter-spacing:-.04em; line-height:.85; }
+  .effort__num span { font-size: .42em; font-weight: 400; }
+  .effort__txt { flex: 1; min-width: 240px; }
+  .effort__txt h3 { font-family:"Shippori Mincho"; font-weight:600; font-size: clamp(18px,3vw,26px); margin-bottom: 12px; }
+  .effort__txt p { color: #b9c0cf; font-size: 15px; }
+
+  /* ============ OUTCOMES ============ */
+  .outcomes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border:1px solid var(--line); border-radius: 20px; overflow: hidden; margin-top: 56px; }
+  .outcome { background: #fff; padding: 40px 34px; }
+  .outcome__no { font-family:"Inter"; font-weight:700; font-size: 14px; color: var(--accent); letter-spacing:.05em; }
+  .outcome h3 { font-family:"Shippori Mincho"; font-weight:700; font-size: clamp(19px,2.8vw,24px); margin: 14px 0 12px; line-height:1.45; }
+  .outcome p { font-size: 14.5px; color: var(--ink-soft); }
+
+  /* ============ CURRICULUM ============ */
+  .timeline { margin-top: 60px; }
+  .day {
+    display: grid; grid-template-columns: 140px 1fr; gap: 32px;
+    padding: 38px 0; border-top: 1px solid rgba(255,255,255,.14);
+  }
+  .day:last-child { border-bottom: 1px solid rgba(255,255,255,.14); }
+  .day__label { }
+  .day__label .d { font-family:"Inter"; font-weight:700; font-size: 13px; letter-spacing:.2em; color:#d8a08f; }
+  .day__label .n { font-family:"Inter"; font-weight:700; font-size: clamp(44px,9vw,72px); line-height:.9; letter-spacing:-.03em; }
+  .day__body h3 { font-family:"Shippori Mincho"; font-weight:600; font-size: clamp(19px,3vw,26px); margin-bottom: 12px; }
+  .day__body p { color:#b9c0cf; font-size: 15px; max-width: 40em; }
+  .day__tag {
+    display:inline-flex; align-items:center; gap:8px; margin-top:16px;
+    font-size:12.5px; font-weight:600; letter-spacing:.04em;
+    background: rgba(216,160,143,.16); color:#e8c4b7; padding:7px 15px; border-radius:999px;
+  }
+
+  /* ============ VOICE (before/after recording) ============ */
+  .voice { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+  .voice__visual {
+    border-radius: 22px; padding: 40px; background: #fff; border:1px solid var(--line);
+    box-shadow: 0 30px 60px -40px rgba(10,14,20,.35);
+  }
+  .voice__row { display:flex; align-items:center; gap:18px; padding: 18px 0; }
+  .voice__row + .voice__row { border-top: 1px solid var(--line); }
+  .voice__pill { font-size:11px; font-weight:700; letter-spacing:.1em; padding:5px 12px; border-radius:999px; white-space:nowrap;}
+  .voice__pill.b { background:#f0ede7; color:var(--ink-soft);}
+  .voice__pill.a { background:var(--accent); color:#fff;}
+  .wave { flex:1; display:flex; align-items:center; gap:3px; height:40px; }
+  .wave i { display:block; width:4px; border-radius:2px; background: var(--line-strong); }
+  .wave.a i { background: var(--accent); }
+  .voice__cap { font-size:12px; color:var(--ink-soft); margin-top:18px; text-align:center; }
+  .voice__line { display:flex; align-items:center; gap:10px; margin-top:14px; font-size:13px; }
+  .voice__line .ic { width:26px;height:26px;border-radius:7px;background:#06c755;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px;}
+
+  /* ============ PROOF (results + guarantee) ============ */
+  .proof { display:grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 56px; }
+  .proof__card {
+    border-radius: 20px; padding: 44px 38px; border:1px solid var(--line); background:#fff;
+  }
+  .proof__card .big { font-family:"Inter"; font-weight:700; font-size: clamp(56px,11vw,104px); line-height:.85; letter-spacing:-.04em; }
+  .proof__card .big span { font-size:.32em; }
+  .proof__card.r .big { color: var(--accent); }
+  .proof__card h3 { font-family:"Shippori Mincho"; font-weight:700; font-size: clamp(19px,3vw,26px); margin: 20px 0 12px; }
+  .proof__card p { color: var(--ink-soft); font-size: 15px; }
+  .proof__card .seal {
+    display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--ink);
+    border-radius:999px;padding:10px 18px;font-size:13px;font-weight:700;letter-spacing:.05em;
+  }
+
+  /* ============ TESTIMONIALS ============ */
+  .voices { columns: 2; column-gap: 28px; margin-top: 52px; }
+  .vcard {
+    break-inside: avoid; background:#fff; border:1px solid var(--line); border-radius:16px;
+    padding: 30px 28px; margin-bottom: 28px;
+  }
+  .vcard p { font-family:"Shippori Mincho"; font-size: 16px; line-height:1.85; color: var(--ink); }
+  .vcard .who { margin-top: 18px; font-size: 12.5px; color: var(--ink-soft); letter-spacing:.03em; }
+  .vcard .stars { color: var(--accent); letter-spacing:2px; font-size:13px; margin-bottom:14px; }
+
+  /* ============ REQUIREMENTS ============ */
+  .reqs { display:grid; grid-template-columns: repeat(3,1fr); gap: 1px; background:var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden; margin-top: 52px;}
+  .req { background:#fff; padding: 38px 30px; }
+  .req .no { font-family:"Inter"; font-weight:700; font-size:13px; color:var(--accent);}
+  .req h3 { font-family:"Shippori Mincho"; font-weight:600; font-size: 19px; margin:14px 0 10px;}
+  .req p { font-size:14px; color:var(--ink-soft);}
+  .reqs-note { margin-top:24px; font-size:13.5px; color:var(--ink-soft); }
+
+  /* ============ OVERVIEW TABLE ============ */
+  .ov { display:grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 52px; align-items:start;}
+  .spec { width:100%; border-collapse: collapse; }
+  .spec th, .spec td { text-align:left; padding: 18px 4px; border-bottom: 1px solid var(--line); font-size: 15px; vertical-align: top;}
+  .spec th { width: 34%; color: var(--ink-soft); font-weight:600; letter-spacing:.04em;}
+  .spec td { color: var(--ink); font-weight:500;}
+  .spec td b { font-weight:700; }
+  .spec .price { font-family:"Inter"; font-weight:700; font-size:22px; letter-spacing:-.01em;}
+
+  .sched { background:#fff; border:1px solid var(--line); border-radius:18px; padding: 36px 32px; }
+  .sched h3 { font-family:"Shippori Mincho"; font-weight:700; font-size:20px; margin-bottom:8px;}
+  .sched .lead { font-size:13px; color:var(--ink-soft); margin-bottom:24px;}
+  .sched__item { padding:18px 0; border-top:1px solid var(--line);}
+  .sched__item:first-of-type{border-top:none;}
+  .sched__item .lvl { font-size:11px; font-weight:700; letter-spacing:.1em; color:var(--accent);}
+  .sched__item .dates { font-family:"Inter"; font-weight:600; font-size: 17px; margin-top:6px; letter-spacing:.01em;}
+  .sched__item .time { font-size:13px; color:var(--ink-soft); margin-top:4px;}
+  .deadline { margin-top:24px; padding:16px 20px; border-radius:12px; background:rgba(184,71,47,.08); color:var(--accent-deep); font-size:14px; font-weight:600; display:flex; align-items:center; gap:10px;}
+
+  /* placeholder marker */
+  .tbd { color: var(--accent); font-weight:700; }
+  mark.ph { background: rgba(184,71,47,.14); color: var(--accent-deep); padding:1px 7px; border-radius:5px; font-weight:700; }
+
+  /* ============ CTA ============ */
+  .cta { text-align:center; }
+  .cta .h2 { color:#fff; }
+  .cta__sub { color:#b9c0cf; margin: 22px auto 38px; max-width: 34em; font-size: clamp(15px,2.3vw,18px);}
+  .cta__big { font-family:"Inter"; font-weight:700; font-size: clamp(36px,8vw,72px); letter-spacing:-.03em; color:#fff; line-height:1; margin-bottom: 8px;}
+  .cta .btn--primary { font-size:18px; padding:20px 44px; }
+  .cta__note { margin-top:24px; font-size:13px; color:#9aa3b4;}
+  .cta__note a { color:#e8c4b7; }
+
+  /* ============ FAQ ============ */
+  .faq { margin-top: 48px; max-width: 800px; }
+  .faq details { border-bottom:1px solid var(--line); }
+  .faq summary {
+    list-style:none; cursor:pointer; padding: 24px 40px 24px 0; position:relative;
+    font-family:"Shippori Mincho"; font-weight:600; font-size: clamp(16px,2.5vw,19px);
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after {
+    content:"+"; position:absolute; right:4px; top:50%; transform:translateY(-50%);
+    font-family:"Inter"; font-weight:300; font-size:26px; color:var(--accent); transition: transform .3s var(--ease);
+  }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq .a { padding: 0 0 26px; color: var(--ink-soft); font-size: 15px; }
+
+  /* ============ FOOTER ============ */
+  .footer { background: var(--ink); color:#9aa3b4; padding: 64px 0 48px; }
+  .footer__top { display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; align-items:flex-end; padding-bottom:36px; border-bottom:1px solid rgba(255,255,255,.1);}
+  .footer__brand { color:#f3f1ec; font-family:"Shippori Mincho"; font-weight:700; font-size:20px;}
+  .footer__brand span{display:block;font-family:"Inter";font-size:11px;letter-spacing:.2em;color:#9aa3b4;margin-top:8px;font-weight:500;}
+  .footer__contact { font-size:13.5px; line-height:1.9; }
+  .footer__contact a{color:#e8c4b7;}
+  .footer__bottom { margin-top:32px; font-size:12px; color:#6b7280; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 860px) {
+    .why__split, .proof, .ov, .voice { grid-template-columns: 1fr; }
+    .outcomes, .reqs { grid-template-columns: 1fr; }
+    .voices { columns: 1; }
+    .voice { gap: 36px; }
+    .effort { gap: 24px; padding: 32px; }
+    .day { grid-template-columns: 90px 1fr; gap: 20px; }
+    .nav__brand span { display:none; }
+  }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 18px; }
+    .reqs { grid-template-columns: 1fr; }
+    .hero__actions .btn { width:100%; justify-content:center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__brand">集中フォニックスコース<span>WINBE UMEGAOKA · SUMMER 2026</span></div>
+  <a class="nav__cta" href="#apply">申し込む</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero__grid-lines"></div>
+  <div class="wrap">
+    <div class="hero__eyebrow">2026年夏期サマーコース ／ 初級編</div>
+    <div class="hero__big">
+      <span class="n num">100</span>
+      <span class="u">words<br><em>in 4 lessons.</em></span>
+    </div>
+    <h1 class="hero__lead mincho">
+      たった<span class="hl">4回</span>のレッスンで、<br>英単語を<span class="hl">100語以上</span>、自分で読む。
+    </h1>
+    <p class="hero__sub">
+      「読めない・覚えられない」の正体は、才能ではなく〈音のルール〉を知らないこと。
+      フォニックスでその仕組みを体得すれば、英語学習は驚くほど軽くなります。
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#apply">募集要項を見る <span class="arrow">→</span></a>
+      <a class="btn btn--ghost" href="#why">なぜ4回で読めるのか</a>
+    </div>
+    <div class="hero__meta">
+      <span><b>全4回</b>（各60分・週1回）</span>
+      <span class="dot">·</span>
+      <span>定員 <b>5名</b>（少人数制）</span>
+      <span class="dot">·</span>
+      <span><b>全額返金保証</b>つき</span>
+    </div>
+  </div>
+</header>
+
+<!-- WHY -->
+<section class="sec" id="why">
+  <div class="wrap narrow reveal">
+    <span class="kicker">Why it works</span>
+    <h2 class="h2">英語は「暗記」ではなく、<br>「音のルール」で読む。</h2>
+    <p class="why__lead">
+      アルファベットには、それぞれ固有の<span class="em">音</span>があります。
+      その規則＝フォニックスを身につけた瞬間、子どもは初めて見る単語も
+      <span class="em">自分の力で読み解ける</span>ようになります。
+    </p>
+  </div>
+
+  <div class="wrap reveal">
+    <div class="why__split">
+      <div class="why__card before">
+        <span class="label">これまで</span>
+        <p class="num big">1 つずつ</p>
+        <p>単語を、形ごと「丸暗記」する。覚えても忘れる。知らない単語は、読めないまま。</p>
+      </div>
+      <div class="why__card after">
+        <span class="label">この講座のあと</span>
+        <p class="num big">ルールで</p>
+        <p>音の組み合わせで「読み解く」。初めての単語も発音でき、記憶にも残りやすくなる。</p>
+      </div>
+    </div>
+
+    <div class="effort">
+      <div class="effort__num num">⅔<span>へ</span></div>
+      <div class="effort__txt">
+        <h3>これからの単語学習の労力が、約3分の2に。</h3>
+        <p>音と文字が一致すると、新しい単語を覚える負担そのものが小さくなります。この講座は、4週間で終わる講座ではなく、その先の英語学習を一生ぶん軽くするための〈土台づくり〉です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="sec sec--warm">
+  <div class="wrap reveal">
+    <span class="kicker">Outcomes</span>
+    <h2 class="h2">4週間後、ここに到達します。</h2>
+    <div class="outcomes">
+      <div class="outcome">
+        <span class="no num">01</span>
+        <h3>英単語を100語以上、読める</h3>
+        <p>これまで読めなかった単語が、自分の口で読めるように。「読める」という最初の自信が、英語を好きにします。</p>
+      </div>
+      <div class="outcome">
+        <span class="no num">02</span>
+        <h3>読めて、書ける</h3>
+        <p>音とスペリングが結びつくから、聞いた音を文字に起こせる。読みと書きが同時に伸びます。</p>
+      </div>
+      <div class="outcome">
+        <span class="no num">03</span>
+        <h3>発音が、劇的に良くなる</h3>
+        <p>口の形・息の出し方を物理的に観察し、本物の音を体得。「通じる発音」の土台が筋肉レベルで定着します。</p>
+      </div>
+      <div class="outcome">
+        <span class="no num">04</span>
+        <h3>これからの英語学習が、楽になる</h3>
+        <p>暗記に頼らず読み解く力がつくから、この先の学習効率が大きく変わります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="sec sec--dark">
+  <div class="wrap reveal">
+    <span class="kicker">Curriculum</span>
+    <h2 class="h2">4日間の設計。</h2>
+    <p class="h2-sub">教室長（しばっち）が全4回を一貫して担当。レベルに合わせ、つまずきをその場で矯正していきます。</p>
+
+    <div class="timeline">
+      <div class="day reveal">
+        <div class="day__label"><div class="d num">DAY</div><div class="n num">1</div></div>
+        <div class="day__body">
+          <h3>アルファベットの音を知る</h3>
+          <p>有声音・無声音を一つずつ紹介。文字の「名前」ではなく「音」を体に入れていきます。</p>
+          <span class="day__tag">🎙 発音ビフォー録音（教室長がタブレットで記録）</span>
+        </div>
+      </div>
+      <div class="day reveal">
+        <div class="day__label"><div class="d num">DAY</div><div class="n num">2</div></div>
+        <div class="day__body">
+          <h3>母音と、苦手な発音を強化</h3>
+          <p>日本語にない音、間違えやすい音を重点的に。口の形を見ながら正しい音を作ります。</p>
+        </div>
+      </div>
+      <div class="day reveal">
+        <div class="day__label"><div class="d num">DAY</div><div class="n num">3</div></div>
+        <div class="day__body">
+          <h3>リーディングとスペリングへ</h3>
+          <p>音の組み合わせで単語を「読み解く」練習へ。読みと書きを橋渡しします。</p>
+        </div>
+      </div>
+      <div class="day reveal">
+        <div class="day__label"><div class="d num">DAY</div><div class="n num">4</div></div>
+        <div class="day__body">
+          <h3>リーディング特訓・総仕上げ</h3>
+          <p>総復習と発音矯正で、100単語読破へ。学んだルールを定着させます。</p>
+          <span class="day__tag">🎙 発音アフター録音 ＆ 成果レポートをLINEで共有</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE / before-after -->
+<section class="sec">
+  <div class="wrap reveal">
+    <div class="voice">
+      <div>
+        <span class="kicker">Before / After</span>
+        <h2 class="h2">「読めた数」だけでなく、<br>「声の変化」で届けます。</h2>
+        <p class="why__lead" style="font-size:clamp(17px,2.6vw,22px);">
+          初日と最終日に、お子さまの発音を録音。
+          その<span class="em">ビフォーアフターの音声</span>を、成果レポートとともに保護者のLINEへお届けします。
+        </p>
+        <p class="hero__sub" style="margin-top:20px;">
+          100単語という「量」の成果に、耳で聴いてわかる「質」の変化を添えて。
+          4週間の歩みを、ご家庭でも実感していただけます。
+        </p>
+      </div>
+      <div class="voice__visual">
+        <div class="voice__row">
+          <span class="voice__pill b">BEFORE</span>
+          <span class="wave b" data-wave="b"></span>
+        </div>
+        <div class="voice__row">
+          <span class="voice__pill a">AFTER</span>
+          <span class="wave a" data-wave="a"></span>
+        </div>
+        <p class="voice__cap">Day 1 と Day 4 の発音を録音・比較</p>
+        <div class="voice__line">
+          <span class="ic">L</span>
+          <span>成果レポート＋比較音声を、保護者LINEへ共有</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="sec sec--warm">
+  <div class="wrap reveal">
+    <span class="kicker">Track record &amp; Guarantee</span>
+    <h2 class="h2">実績で、約束します。</h2>
+    <div class="proof">
+      <div class="proof__card r">
+        <div class="big num">100<span>%</span></div>
+        <h3>毎期、満足の実績</h3>
+        <p>これまで複数期にわたり開講し、参加されたご家庭から確かな成果の声をいただいてきた、人気の定番コースです。</p>
+      </div>
+      <div class="proof__card">
+        <span class="seal">✓ 全額返金保証</span>
+        <h3>効果がなければ、全額返金</h3>
+        <p>指示した宿題を完遂し、全4回に参加されたうえで効果を感じられなかった場合は、受講料を全額返金いたします。それだけの自信があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec">
+  <div class="wrap reveal">
+    <span class="kicker">Voices</span>
+    <h2 class="h2">保護者の声。</h2>
+    <p class="h2-sub">実際にご受講いただいたご家庭からの、アンケートの声です。</p>
+    <div class="voices">
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <p>「短期間でこんなに単語が読めるようになって、正直ビックリです。発音も基本的なルールはしっかり理解している様子。この調子で楽しみながら、英検にも繋げたいです。」</p>
+        <div class="who">受講生の保護者さま</div>
+      </div>
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <p>「読める単語が増えて自信がつき、英語を好きになったようです。宿題の動画も飽きることなく、笑いながら何度も見返していました。ありがとうございました。」</p>
+        <div class="who">受講生の保護者さま</div>
+      </div>
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <p>「苦手な発音をフィードバックしていただけたので、集中的に練習でき、克服できて良かったです。知らない単語も読めるようになって、成果を実感できました。」</p>
+        <div class="who">受講生の保護者さま</div>
+      </div>
+      <div class="vcard">
+        <div class="stars">★★★★★</div>
+        <p>「先生がとても丁寧に、肯定的に教えてくださったおかげで、最初から最後までモチベーション高く受講できました。もっと英語が話せるようになりたいと意欲を見せています。」</p>
+        <div class="who">受講生の保護者さま</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section class="sec sec--warm">
+  <div class="wrap reveal">
+    <span class="kicker">For serious learners</span>
+    <h2 class="h2">参加には、3つの条件があります。</h2>
+    <p class="h2-sub">短期集中で確実に成果を出すため、本気で取り組めるお子さまを対象としています。</p>
+    <div class="reqs">
+      <div class="req">
+        <span class="no num">01</span>
+        <h3>アルファベットを認識できる</h3>
+        <p>大文字・小文字を見て、即座に（1秒以内に）読める状態であること。</p>
+      </div>
+      <div class="req">
+        <span class="no num">02</span>
+        <h3>宿題（家庭学習）に取り組める</h3>
+        <p>本講座は<b>宿題の量が多め</b>です。ご家庭で1日30分以上の学習を、4週間やり切れるお子さま限定です。</p>
+      </div>
+      <div class="req">
+        <span class="no num">03</span>
+        <h3>集中して座学できる</h3>
+        <p>目安は<b>小学3年生〜中学1年生</b>。60分間、落ち着いて学習に取り組めること。</p>
+      </div>
+    </div>
+    <p class="reqs-note">※ 不安な点があれば、お申し込み前にお気軽にご相談ください。</p>
+  </div>
+</section>
+
+<!-- OVERVIEW + SCHEDULE -->
+<section class="sec" id="overview">
+  <div class="wrap reveal">
+    <span class="kicker">Overview</span>
+    <h2 class="h2">コース概要。</h2>
+    <div class="ov">
+      <table class="spec">
+        <tr><th>講座名</th><td><b>集中フォニックスコース</b><br>〜100単語攻略講座〜（初級編）</td></tr>
+        <tr><th>対象</th><td>小学3年生〜中学1年生程度 ／ 英語初学者（フォニックス未経験）歓迎<br><small>※宿題量が多いため、家庭学習に取り組めるお子さま限定</small></td></tr>
+        <tr><th>期間・回数</th><td>1ヶ月・全4回（週1回 × 各60分）</td></tr>
+        <tr><th>講師</th><td>教室長（しばっち）が全回を一貫担当</td></tr>
+        <tr><th>定員</th><td><b>5名限定</b>（少人数制・先着順）</td></tr>
+        <tr><th>受講料</th><td class="price">¥20,000（税込）</td></tr>
+        <tr><th>保証</th><td>全額返金保証つき（条件は上記）</td></tr>
+        <tr><th>会場</th><td>WinBe梅ヶ丘校<br>〒154-0022 東京都世田谷区梅丘1-25-6（小田急線「梅ヶ丘」駅 南口 徒歩30秒）</td></tr>
+      </table>
+
+      <div class="sched">
+        <h3>開講スケジュール</h3>
+        <p class="lead">2026年夏期 ／ 初級編・定員5名 ／ 定員に達し次第締め切ります。</p>
+        <div class="sched__item">
+          <div class="lvl num">初級編</div>
+          <div class="dates">7/27・8/3・8/17・8/24（月）</div>
+          <div class="time">14:00〜15:00（全4回）</div>
+        </div>
+        <div class="deadline">⏳ 募集締切：7/24（金）／定員に達し次第</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec sec--ink" id="apply">
+  <div class="wrap narrow reveal cta">
+    <span class="kicker" style="justify-content:center;">Apply</span>
+    <div class="cta__big num">4 lessons. 100 words.</div>
+    <h2 class="h2">この夏、英語が「読める」へ。</h2>
+    <p class="cta__sub">初級編・定員5名の少人数制です。ご検討中の方は、お早めにお申し込みください。</p>
+    <a class="btn btn--primary" href="https://forms.gle/XXXXXXXXXXXX" id="applyBtn" target="_blank" rel="noopener">
+      お申し込みフォームへ <span class="arrow">→</span>
+    </a>
+    <p class="cta__note">
+      <mark class="ph">↑ Google FormsのURLを差し替え</mark><br><br>
+      お問い合わせ：<a href="mailto:info.winbe.umegaoka@gmail.com">info.winbe.umegaoka@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap narrow reveal">
+    <span class="kicker">FAQ</span>
+    <h2 class="h2">よくあるご質問。</h2>
+    <div class="faq">
+      <details>
+        <summary>英語がまったく初めてでも大丈夫ですか？</summary>
+        <div class="a">はい。フォニックス未経験のお子さまを対象とした初級編です。ただし、アルファベットの大文字・小文字を即座に読める状態であることが参加の条件となります。</div>
+      </details>
+      <details>
+        <summary>本当に4回で100単語も読めるようになりますか？</summary>
+        <div class="a">音のルール（フォニックス）を体系的に学ぶことで、丸暗記に頼らず単語を「読み解く」力が身につきます。指示した家庭学習に取り組んでいただくことが前提ですが、これまで多くのお子さまが成果を実感されています。万一効果を感じられなかった場合は全額返金いたします。</div>
+      </details>
+      <details>
+        <summary>家庭学習はどのくらい必要ですか？</summary>
+        <div class="a">1日30分以上を目安に、4週間の継続をお願いしています。短期集中で確実に定着させるための大切な要素です。</div>
+      </details>
+      <details>
+        <summary>発音の録音は何のために行うのですか？</summary>
+        <div class="a">初日（Day 1）と最終日（Day 4）に発音を録音し、その変化を比較音声として保護者のLINEへお届けします。数だけでなく「声の質の変化」で、お子さまの成長を耳で実感していただくためのものです。</div>
+      </details>
+      <details>
+        <summary>申し込み後の流れを教えてください。</summary>
+        <div class="a">お申し込みフォームの送信後、教室よりご連絡いたします。ご不明な点は info.winbe.umegaoka@gmail.com までお気軽にお問い合わせください。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">集中フォニックスコース<span>WINBE UMEGAOKA · SUMMER 2026</span></div>
+      <div class="footer__contact">
+        WinBe梅ヶ丘校<br>
+        〒154-0022 東京都世田谷区梅丘1-25-6<br>
+        TEL <a href="tel:03-5426-3006">03-5426-3006</a><br>
+        <a href="mailto:info.winbe.umegaoka@gmail.com">info.winbe.umegaoka@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 WinBe梅ヶ丘校</span>
+      <span>集中フォニックスコース 〜100単語攻略講座〜</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // nav scroll state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // build waveforms (before = uneven/low, after = even/tall)
+  const heights = {
+    b: [10,16,8,22,12,9,18,11,24,14,7,19,13,8,21,10,15,9,12,17,8,20,11,14,9],
+    a: [22,30,26,34,28,32,24,36,29,33,27,35,30,38,26,34,28,31,25,37,29,33,27,35,30]
+  };
+  document.querySelectorAll('.wave').forEach(w => {
+    const set = heights[w.dataset.wave] || heights.b;
+    w.innerHTML = set.map(h => `<i style="height:${h}px"></i>`).join('');
+  });
+</script>
+</body>
+</html>
