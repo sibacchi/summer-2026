@@ -57,6 +57,11 @@
 
         <!-- ===================== Hero ===================== -->
         <section class="hero">
+            <!-- ヒーロー背景ビデオ。poster は読込中／自動再生不可時のフォールバック（=従来の写真）。 -->
+            <video class="hero-bg-test" autoplay muted loop playsinline preload="auto" poster="images/hero-bg.jpg">
+                <!-- media条件でスマホ(≤600px)は動画を読み込まない＝CSS側で写真背景に切替 -->
+                <source src="images/hero-bg.mp4" type="video/mp4" media="(min-width: 601px)">
+            </video>
             <div class="container hero-grid">
                 <div class="hero-text">
                     <span class="hero-eyebrow">WinBe Summer Program 2026</span>

@@ -1070,3 +1070,31 @@ section[id], #apply { scroll-margin-top: 88px; }
     .hq-date { flex: 1 0 100%; order: 3; }
     .hq-link { margin-left: auto; }
 }
+
+
+/* ===== ヒーロー背景ビデオ（フォールバックは video の poster=images/hero-bg.jpg）===== */
+.hero { background-image: none; }          /* 背景は video に置き換え（poster がフォールバック）*/
+.hero-bg-test {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% center;
+    /* Gemini/Veo の透かし（右下）を画面外へ押し出すクロップ。
+       数値を上げるほど大きく拡大＝右下を多く切る。透かしが残る/切りすぎなら 1.10〜1.30 で微調整。 */
+    transform: scale(1.18);
+    transform-origin: left top;
+    z-index: 0;                            /* 背景レイヤー */
+    background: var(--surface);            /* 動画ロード前のちらつき防止 */
+    pointer-events: none;
+}
+.hero::before { z-index: 1; }              /* 白スクリムをビデオの上へ（文字の可読性確保）*/
+.hero-grid    { z-index: 2; }              /* テキストを最前面へ */
+@media (max-width: 600px) {
+    /* スマホは動画を使わず従来の写真背景に戻す（通信量・電池対策）。
+       動画自体も <source media> で読み込まれないため 3.4MB のDLが発生しない。 */
+    .hero { background-image: url("images/hero-bg.jpg"); }
+    .hero-bg-test { display: none; }
+}
+/* ===== /ヒーロー背景ビデオ ===== */
