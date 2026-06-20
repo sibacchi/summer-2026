@@ -115,7 +115,15 @@
   .btn-ghost:hover { background: var(--ink); color: #fff; }
   .btn-lg { padding: 1.05em 2.2em; font-size: 1.05rem; }
   .nav .btn { padding: .62em 1.3em; font-size: .88rem; }
-  @media (max-width: 720px){ .nav-links .txt { display:none; } }
+  @media (max-width: 720px){
+    .nav-links .txt { display:none; }
+    .nav-links .btn-ghost { display:none; } /* 学年切替は下の切替バンドが担うため、ヘッダーでは非表示 */
+    .nav { gap: .5rem; }
+    .brand { font-size: .9rem; white-space: nowrap; flex: none; }
+    .brand .dot { width: 22px; height: 22px; }
+    .nav-links { gap: .5rem; }
+    .nav .btn { padding: .55em 1.05em; font-size: .82rem; white-space: nowrap; }
+  }
 
   /* ---------- Hero ---------- */
   .hero { position: relative; padding: clamp(54px, 8vw, 96px) 0 clamp(48px,7vw,84px); overflow: hidden; }
@@ -807,7 +815,7 @@
       </div>
 
       <label class="consent">
-        <input type="checkbox" id="consent" name="consent" required />
+        <input type="checkbox" id="consent" name="consent" value="同意（個人情報の利用に同意）" required />
         <span>個人情報を、本コースのご連絡・ご案内の目的で利用することに同意します。</span>
       </label>
 

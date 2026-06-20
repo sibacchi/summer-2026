@@ -97,6 +97,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ==========================================================================
+     Terms / Cancellation Policy Link
+     ========================================================================== */
+  const termsLink = document.getElementById('terms-link');
+  const termsDetails = document.querySelector('.terms-details');
+
+  if (termsLink && termsDetails) {
+    const openTerms = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      termsDetails.open = true;
+      termsDetails.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+    termsLink.addEventListener('click', openTerms);
+    // Keyboard activation (Enter / Space) since this <a> has no href
+    termsLink.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        openTerms(e);
+      }
+    });
+  }
+
+
+  /* ==========================================================================
      Scroll Reveal Animation (Intersection Observer)
      ========================================================================== */
   const revealElements = document.querySelectorAll(

@@ -632,7 +632,7 @@
 
 <!-- ===== Sticky mobile CTA ===== -->
 <div class="sticky-cta">
-  <a class="btn btn-primary" href="#apply">受付中／いますぐ申し込む →</a>
+  <a class="btn btn-primary" href="#apply" id="applyBtnSticky">受付中／いますぐ申し込む →</a>
 </div>
 
 <script>
@@ -658,10 +658,11 @@
 
   /* ===== 申込み導線（Google フォーム） =====
      ★ Google フォーム作成後、下の APPLY_URL に「共有URL（https://forms.gle/… 等）」を貼るだけで
-       ページ内のすべての申込ボタン（#applyBtn / #applyBtn2）が新規タブで開くようになります。
+       ページ内のすべての申込ボタン（#applyBtn / #applyBtn2 / #applyBtnSticky＝スマホ追従CTA）が
+       新規タブで開くようになります。
        URL が空の間は、誤って壊れたリンクへ飛ばないよう「準備中」案内を表示します。 */
   const APPLY_URL = "https://docs.google.com/forms/d/e/1FAIpQLScUFcgbXUefWBjdcjORlgSkqeLHAY4V0DCv5axigTCxA_jF_g/viewform"; // Google フォーム（申込）
-  document.querySelectorAll("#applyBtn, #applyBtn2").forEach(btn=>{
+  document.querySelectorAll("#applyBtn, #applyBtn2, #applyBtnSticky").forEach(btn=>{
     if(APPLY_URL){
       btn.href = APPLY_URL;
       btn.target = "_blank";

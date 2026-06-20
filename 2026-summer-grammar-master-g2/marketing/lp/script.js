@@ -9,15 +9,16 @@
    ============================================================ */
 
 /* ▼ コースごとに設定するのはこの2つだけ ───────────────── */
-const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/＜FORM_ID＞/formResponse';
+const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSe0XH8k9RPnOWB49RvmOGrO6kIF5z1JjsgtaDmRvRwgNdH7zw/formResponse';
 const FIELD_MAP = {
   // 'LPのname': 'entry.ID'
-  'parent-name':  'entry.000000000',
-  'student-name': 'entry.000000000',
-  'grade':        'entry.000000000',
-  'phone':        'entry.000000000',
-  'email':        'entry.000000000',
-  'message':      'entry.000000000',
+  'parent-name':  'entry.2101062970',
+  'student-name': 'entry.264759235',
+  'grade':        'entry.225871219',
+  'phone':        'entry.1415181407',
+  'email':        'entry.1044319799',
+  'message':      'entry.1672131491',
+  'consent':      'entry.1369584048', // 同意チェック（チェック時に value のテキストが送信される）
 };
 /* ───────────────────────────────────────────────────────── */
 
