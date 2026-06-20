@@ -56,7 +56,7 @@ if (applyForm) {
     const done = () => {
       submitButton.disabled = false;
       submitButton.textContent = original;
-      setStatus('success', 'お申し込みを受け付けました。担当より追ってご連絡いたします。');
+      setStatus('success', 'お申し込みを受け付けました。ご入力のメールアドレス宛てに「控えメール」を自動送信しています。数分たっても控えメールが届かない場合は、受付ができていない可能性がありますので、お手数ですが info.winbe.umegaoka@gmail.com までご連絡ください。（迷惑メール・プロモーションタブもご確認ください）');
       applyForm.reset();
     };
 

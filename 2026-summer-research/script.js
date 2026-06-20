@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const finish = () => {
         submitButton.disabled = false;
         submitButton.textContent = originalBtnText;
-        setStatus('success', 'ありがとうございます！お申し込み内容を受け付けました。空き状況を確認のうえ、担当者より2〜3日以内にご連絡いたします。');
+        setStatus('success', 'お申し込みを受け付けました。ご入力のメールアドレス宛てに「控えメール」を自動送信しています。数分たっても控えメールが届かない場合は、受付ができていない可能性がありますので、お手数ですが info.winbe.umegaoka@gmail.com までご連絡ください。（迷惑メール・プロモーションタブもご確認ください）');
         applyForm.reset();
       };
 
