@@ -21,6 +21,45 @@ const FIELD_MAP = {
 };
 /* ───────────────────────────────────────────────────────── */
 
+/* ▼ コンバージョン計測の設定 ─────────────────────────────────
+   index.html <head> の gtag.js（GA4 + Google広告）と連動。
+   ・GA4_ENABLED        … GA4 の generate_lead を送るか（全流入で送信。流入元はGA4側で分離）
+   ・ADS_CONVERSION_SEND_TO … Google広告のコンバージョン送信先 'AW-XXXXXXXXX/ラベル'。
+        コンバージョンアクション作成画面の「タグを自分で追加する > gtag」に表示される
+        send_to の値をそのまま貼り付ける。XXXX を含む間は発火しない（=未設定スキップ）。
+   ・CONVERSION_VALUE   … 1件あたりの金額（ROAS算出用）。通常¥30,000／早割期間は27000に変更可。
+   ※ ポータル/内部配布からの流入は gclid を持たないため、タグが発火しても
+      Google広告側で広告CVには計上されない（アトリビューションが自動判定）。 */
+const GA4_ENABLED            = true;
+const ADS_CONVERSION_SEND_TO = 'AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXX';
+const CONVERSION_VALUE       = 30000;
+
+/* 申込フォーム送信成功時に1回だけ呼ぶ。計測失敗は申込完了をブロックしない。 */
+const fireConversions = () => {
+  try {
+    if (typeof window.gtag !== 'function') return;
+    // GA4：全申込をリードとして記録（source/medium はGA4が自動付与＝後から流入元別に分離可能）
+    if (GA4_ENABLED) {
+      window.gtag('event', 'generate_lead', {
+        currency: 'JPY',
+        value: CONVERSION_VALUE,
+        course: 'chu1-grammar-pomodoro',
+      });
+    }
+    // Google広告：コンバージョン。gclidのある広告クリック由来のみ計上される（ポータル流入は除外）
+    if (ADS_CONVERSION_SEND_TO && !ADS_CONVERSION_SEND_TO.includes('XXXX')) {
+      window.gtag('event', 'conversion', {
+        send_to: ADS_CONVERSION_SEND_TO,
+        value: CONVERSION_VALUE,
+        currency: 'JPY',
+      });
+    }
+  } catch (err) {
+    console.warn('[apply-form] コンバージョン計測の発火に失敗（申込自体は完了）:', err);
+  }
+};
+/* ───────────────────────────────────────────────────────── */
+
 const applyForm    = document.getElementById('apply-form');
 const formStatus   = document.getElementById('form-status');
 const submitButton = document.getElementById('btn-submit-form');
@@ -52,16 +91,19 @@ if (applyForm) {
       if (v !== null && v !== '') payload.append(entryId, v);
     }
 
-    const done = () => {
+    const done = (isRealSubmit) => {
       submitButton.disabled = false;
       submitButton.textContent = original;
       setStatus('success', 'お申し込みを受け付けました。ご入力のメールアドレス宛てに「控えメール」を自動送信しています。数分たっても控えメールが届かない場合は、受付ができていない可能性がありますので、お手数ですが info.winbe.umegaoka@gmail.com までご連絡ください。（迷惑メール・プロモーションタブもご確認ください）');
+      // 本番送信（Googleフォームへ実際にPOST）が成功した時のみコンバージョンを計測。
+      // デモ動作（フォーム未設定）では発火しない。
+      if (isRealSubmit) fireConversions();
       applyForm.reset();
     };
 
     if (isConfigured()) {
       fetch(GOOGLE_FORM_ACTION, { method: 'POST', mode: 'no-cors', body: payload })
-        .then(done)
+        .then(() => done(true))   // 本番送信成功 → コンバージョン計測あり
         .catch(() => {
           submitButton.disabled = false;
           submitButton.textContent = original;
@@ -69,7 +111,7 @@ if (applyForm) {
         });
     } else {
       console.warn('[apply-form] Googleフォーム未設定。GOOGLE_FORM_ACTION/FIELD_MAP を設定してください（apply_form_setup.md 参照）。');
-      setTimeout(done, 800); // 未設定時はデモ動作（記録されません）
+      setTimeout(() => done(false), 800); // 未設定時はデモ動作（記録もコンバージョン計測もされません）
     }
   });
 }
