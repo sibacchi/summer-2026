@@ -31,7 +31,7 @@ const FIELD_MAP = {
    ※ ポータル/内部配布からの流入は gclid を持たないため、タグが発火しても
       Google広告側で広告CVには計上されない（アトリビューションが自動判定）。 */
 const GA4_ENABLED            = true;
-const ADS_CONVERSION_SEND_TO = 'AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXX';
+const ADS_CONVERSION_SEND_TO = 'AW-10891662628/rLtzCI3ag4AbEKSqxsko';
 const CONVERSION_VALUE       = 30000;
 
 /* 申込フォーム送信成功時に1回だけ呼ぶ。計測失敗は申込完了をブロックしない。 */
